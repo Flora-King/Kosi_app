@@ -33,8 +33,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-floraking-kosiapp-rzb6j5uum26.ws-eu104.gitpod.io', 'kosi-app-9673f8ad46df.herokuapp.com']
 
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -46,6 +44,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'django_summernote',
     'kosi_app',
 ]
 
