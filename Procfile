@@ -1,1 +1,1 @@
-web: gunicorn kosi.settings.wsgi
+web: gunicorn kosi.wsgi
