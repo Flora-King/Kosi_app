@@ -31,10 +31,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ['8000-floraking-kosiapp-rzb6j5uum26.ws-eu104.gitpod.io']
-# ALLOWED_HOSTS = ['kosi-app.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['8000-floraking-kosiapp-rzb6j5uum26.ws-eu104.gitpod.io', 'kosi-app-9673f8ad46df.herokuapp.com']
 
-ALLOWED_HOSTS = '8000-floraking-kosiapp-rzb6j5uum26.ws-eu104.gitpod.io'
 
 
 # Application definition
