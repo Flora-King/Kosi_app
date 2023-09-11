@@ -1,0 +1,1 @@
+web: gunicorn kosi_app.wsgi
