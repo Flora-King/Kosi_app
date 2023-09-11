@@ -32,7 +32,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 # ALLOWED_HOSTS = ['8000-floraking-kosiapp-rzb6j5uum26.ws-eu104.gitpod.io']
-ALLOWED_HOSTS = ['kosi-app.herokuapp.com', 'localhost']
+# ALLOWED_HOSTS = ['kosi-app.herokuapp.com', 'localhost']
+
+ALLOWED_HOSTS = '8000-floraking-kosiapp-rzb6j5uum26.ws-eu104.gitpod.io'
 
 
 # Application definition
