@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
+from django.http import HttpResponseRedirect
 from .models import Course
 from .forms import ReviewForm
 
@@ -64,3 +65,15 @@ class CourseDetail(View):
                 "Review_form": ReviewForm()
             },
         )
+
+
+class CourseStar(View):
+    def post(self, request, slug):
+        course = get_object_or_404(Course, slug=slug)
+
+        if course.stars.filter(id=request.user.id).exists():
+            course.stars.remove(request.user)
+        else:
+            post.stars.add(request.user)
+
+        return HttpResponseRedirect(reverse('course_detail', args=[slug]))

@@ -1,5 +1,4 @@
 {% extends 'base.html' %} {% block content %}
-
 {% load crispy_forms_tags %}
 
 <div class="masthead">
@@ -9,14 +8,14 @@
                 <!-- Post title goes in these h1 tags -->
                 <h1 class="post-title">{{ course.title }}</h1>
                 <!-- Post author goes before the | the post's created date goes after -->
-                <p class="post-subtitle">{{ course.author }} | {{ course.delivery_date }}</p>
+                <p class="post-subtitle">{{ course.delivery_method }} | {{ course.delivery_date }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
-                {% if "placeholder" in course.featured_image.url %}
+                {% if "placeholder" in post.featured_image.url %}
                 <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
                 {% else %}
-                <img src=" {{ post.featured_image.url }}" width="100%">
+                <img src=" {{ course.featured_image.url }}" width="100%">
                 {% endif %}
             </div>
         </div>
@@ -27,7 +26,7 @@
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
             <div class="card-body">
-                <!-- The post content goes inside the card-text. -->
+                <!-- The course content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
                 <p class="card-text ">
                     {{ course.content | safe }}
@@ -35,8 +34,22 @@
                 <div class="row">
 
                     <div class="col-1">
-                        <!-- The number of likes goes before the closing strong tag -->
-                        <strong class="text-secondary"><i class="far fa-heart"></i> {{ course.number_of_stars }} </strong>
+                        <strong>
+                            {% if user.is_authenticated %}
+                            <form class="d-inline" action="{% url 'course_star' course.slug %}" method="POST">
+                                {% csrf_token %}
+                                {% if liked %}
+                                <button type="submit" name="blogpost_id" value="{{course.slug}}" class="btn-like"><i class="fas fa-heart"></i></button>
+                                {% else %}
+                                <button type="submit" name="blogpost_id" value="{{course.slug}}" class="btn-like"><i class="far fa-heart"></i></button>
+                                {% endif %}
+                            </form>
+                            {% else %}
+                            <span class="text-secondary"><i class="far fa-heart"></i></span>
+                            {% endif %}
+                        <!-- The number of stars goes before the closing strong tag -->
+                        <span class="text-secondary">{{ course.number_of_stars }} </span>
+                        </strong>
                     </div>
                     <div class="col-1">
                         {% with reviews.count as total_reviews %}
@@ -58,18 +71,18 @@
         <div class="col-md-8 card mb-4  mt-3 ">
             <h3>Reviews:</h3>
             <div class="card-body">
-                <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
+                <!-- We want a for loop inside the empty control tags to iterate through each review in comments -->
                 {% for review in reviews %}
                 <div class="reviews" style="padding: 10px;">
                     <p class="font-weight-bold">
-                        <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
+                        <!-- The reviewer's name goes here. Check the model if you're not sure what that is -->
                         {{ review.name }}
                         <span class=" text-muted font-weight-normal">
-                            <!-- The comment's created date goes here -->
+                            <!-- The review's created date goes here -->
                             {{ review.created_on }}
                         </span> wrote:
                     </p>
-                    <!-- The body of the comment goes before the | -->
+                    <!-- The body of the review goes before the | -->
                     {{ review.body | linebreaks }}
                 </div>
                 <!-- Our for loop ends here -->
@@ -78,17 +91,19 @@
         </div>
         <div class="col-md-4 card mb-4  mt-3 ">
             <div class="card-body">
-                {% if commented %}
-                <div class="alert alert-success" role="alert">Your review is awaiting approval</div>
+                <!-- For later -->
+                {% if reviewed %}
+                <div class="alert alert-success" role="alert">
+                    Your review is awaiting approval
+                </div>
                 {% else %}
-
                 {% if user.is_authenticated %}
 
                 <h3>Leave a review:</h3>
                 <p>Posting as: {{ user.username }}</p>
                 <form method="post" style="margin-top: 1.3em;">
                     {{ review_form | crispy }}
-                    {{ csrf_token }}
+                    {% csrf_token %}
                     <button type="submit" class="btn btn-signup btn-lg">Submit</button>
                 </form>
                 {% endif %}
