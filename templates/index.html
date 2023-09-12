@@ -8,7 +8,7 @@
         <!-- Course list Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
-                {% for post in post_list %}
+                {% for course in course_list %}
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
@@ -20,7 +20,7 @@
                                 <img class="card-img-top" src=" {{ course.featured_image.url }}">
                                 {% endif %}
                                 <div class="image-flash">
-                                    <p class="author">Author: {{ course.author }}</p>
+                                    <p class="author">{{ course.delivery_method }}</p>
                                 </div>
                             </div>
                             <a href="{% url 'course_detail' course.slug %}" class="course-link">
