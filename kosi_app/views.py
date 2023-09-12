@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
 from .models import Course
+from .forms import ReviewForm
 
 
 class CourseList(generic.ListView):
@@ -26,6 +27,7 @@ class CourseDetail(generic.ListView):
             {
                 "course": course,
                 "reviews": reviews,
-                "stared": stared
+                "stared": stared,
+                "Review_form": ReviewForm()
             },
         )
