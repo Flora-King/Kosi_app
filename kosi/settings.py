@@ -33,6 +33,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-floraking-kosiapp-rzb6j5uum26.ws-eu104.gitpod.io', 'kosi-app-9673f8ad46df.herokuapp.com']
 
+
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+
 # Application definition
 
 INSTALLED_APPS = [
