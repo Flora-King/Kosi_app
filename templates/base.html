@@ -32,16 +32,7 @@
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <!--   search start-->
-            <div class="input-group collapse navbar-collapse search-btn" id="navbarText">
-                <input type="text" class="form-control search-btn" placeholder="Search by course title">
-                <div class="input-group-append search-btn">
-                  <button class="btn btn-secondary" type="button">
-                    <i class="fa fa-search"></i>
-                  </button>
-                </div>
-            </div>
-            <!--search ends-->
+
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -60,9 +51,24 @@
                     </li>
                     {% endif %}
                 </ul>
-                <span class="navbar-text text-muted">
-                    a course booking system worth using
-                </span>
+
+              <!-- search start
+            <div class="input-group collapse navbar-collapse search-btn" id="navbarText">
+                <input type="text" class="form-control search-btn" placeholder="Search by course title">
+                <div class="input-group-append search-btn">
+                  <button class="btn btn-secondary" type="button">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </div>
+            </div>
+            search ends -->
+            <nav class="navbar navbar-expand-sm navbar-dark">
+                <form class="form-inline" action="/action_page.php">
+                  <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                  <button class="btn" style="background-color: brown; color: #fff;" type="submit">Search</button>
+                </form>
+              </nav>
+
             </div>
         </div>
     </nav>

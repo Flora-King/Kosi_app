@@ -20,7 +20,7 @@ class Course(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     excerpt = models.TextField(max_length=300)
-    course_content = models.TextField(max_length=800)
+    course_content = models.TextField(max_length=1500)
     delivery_from = models.DateTimeField(auto_now_add=True)
     delivery_to = models.DateTimeField(auto_now_add=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)

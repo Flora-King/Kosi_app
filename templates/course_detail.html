@@ -8,7 +8,6 @@
             <div class="col-md-6 masthead-text">
                 <!-- course title goes in these h1 tags -->
                 <h1 class="course-title">{{ course.title }}</h1>
-                <!-- course author goes before the | the course's created date goes after -->
                 <p class="course-subtitle">{{ course.delivery }} | {{ course.delivery_from }} to {{ course.delivery_to }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
@@ -22,16 +21,13 @@
         </div>
     </div>
 </div>
-
 <div class="container">
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
             <div class="card-body">
                 <!-- The course content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
-                <p class="card-text ">
-                    {{ course.content | safe }}
-                </p>
+                <p class="card-text ">{{ course.course_content| safe }}</p>
                 <div class="row">
 
                     <div class="col-1">
@@ -70,7 +66,8 @@
     </div>
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3 ">
-            <h3>Review:</h3>
+            <h3>Reviews:</h3>
+            <h4>To add a review, please login first.</h4>
             <div class="card-body">
                 <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
                 {% for review in reviews %}
