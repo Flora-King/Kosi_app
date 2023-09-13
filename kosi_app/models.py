@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import Model
 
 # my models
 from django.contrib.auth.models import User
@@ -9,19 +10,20 @@ DELIVERY = ((1, "Classroom"), (2, "Online"), (3, "All"))
 
 
 class Course(models.Model):
-    delivery_method = models.BooleanField(choices=DELIVERY, default=3)
+    delivery = models.CharField(max_length=20, choices=DELIVERY, default=3)
     featured_image = CloudinaryField('image', default='placeholder')
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     excerpt = models.TextField(max_length=300)
     course_content = models.TextField(max_length=800)
-    delivery_date = models.DateTimeField()
+    delivery_from = models.DateTimeField(auto_now_add=True)
+    delivery_to = models.DateTimeField(auto_now_add=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     stars = models.ManyToManyField(User, related_name='stars', blank=True)
     status = models.IntegerField(choices=STATUS, default=0)
 
     class Meta:
-        ordering = ['price', 'delivery_date']
+        ordering = ['price']
 
     def __str__(self):
         return self.title

@@ -20,7 +20,7 @@
                                 <img class="card-img-top" src=" {{ course.featured_image.url }}">
                                 {% endif %}
                                 <div class="image-flash">
-                                    <p class="author">{{ course.delivery_method }}</p>
+                                    <p class="author">{{ course.delivery }}</p>
                                 </div>
                             </div>
                             <a href="{% url 'course_detail' course.slug %}" class="course-link">
@@ -28,7 +28,7 @@
                                 <p class="card-text">{{ course.excerpt }}</p>
                             </a>
                             <hr />
-                            <p class="card-text text-muted h6">{{ course.delivery_date}} <i class="far fa-star"></i>
+                            <p class="card-text text-muted h6">{{ course.delivery_from}} <i class="far fa-star"></i>
                                 {{ course.number_of_stars }}</p>
                         </div>
                     </div>

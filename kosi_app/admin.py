@@ -8,10 +8,10 @@ from django_summernote.admin import SummernoteModelAdmin
 class CourseAdmin(SummernoteModelAdmin):
 
     prepopulated_fields = {'slug': ('title',)}
-    list_filter = ('status', 'delivery_date')
+    list_filter = ('status', 'delivery_from')
     summernote_fields = ('content',)
     search_fields = ['title', 'content']
-    list_display = ('title', 'slug', 'status', 'delivery_date',)
+    list_display = ('title', 'slug', 'status', 'delivery_from',)
 
 
 @admin.register(Review)
