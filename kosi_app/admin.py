@@ -22,5 +22,5 @@ class ReviewAdmin(admin.ModelAdmin):
     search_fields = ('name', 'email', 'body')
     actions = ['approved_reviews']
 
-    def approved_reviews(sefl, request, queryset):
+    def approve_reviews(self, request, queryset):
         queryset.updated(approved=True)

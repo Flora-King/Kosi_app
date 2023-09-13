@@ -18,7 +18,7 @@ class CourseDetail(View):
         queryset = Course.objects.filter(status=1)
         course = get_object_or_404(queryset, slug=slug)
         reviews = course.reviews.filter(approved=True).order_by("created_on")
-        liked = False
+        # liked = False
         stars = False
         if course.stars.filter(id=self.request.user.id).exists():
             stars = True
@@ -31,7 +31,7 @@ class CourseDetail(View):
                 "reviews": reviews,
                 "commented": False,
                 "stars": stars,
-                "Review_form": ReviewForm()
+                "review_form": ReviewForm()
             },
         )
 
@@ -39,7 +39,7 @@ class CourseDetail(View):
         queryset = Course.objects.filter(status=1)
         course = get_object_or_404(queryset, slug=slug)
         reviews = course.reviews.filter(approved=True).order_by("created_on")
-        liked = False
+        # liked = False
         if course.stars.filter(id=self.request.user.id).exists():
             stars = True
 
@@ -47,7 +47,7 @@ class CourseDetail(View):
 
         if review_form.is_valid():
             review_form.instance.email = request.user.email
-            review_form.instance.anem = request.user.username
+            review_form.instance.name = request.user.username
             review = review_form.save(commit=False)
             review.course = course
             review.save()
@@ -62,7 +62,7 @@ class CourseDetail(View):
                 "reviews": reviews,
                 "reviewed": True,
                 "stars": stars,
-                "Review_form": ReviewForm()
+                "review_form": ReviewForm()
             },
         )
 

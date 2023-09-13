@@ -46,7 +46,7 @@ body {
     background-color: #23BBBB;
 }
 
-.delivery_method {
+.delivery {
     color: white;
     margin: 4px;
     text-transform: uppercase;
@@ -128,15 +128,16 @@ body {
     text-decoration: underline;
 }
 
-.btn-like {
+.btn-star {
     color: #E84610;
     border: none;
     background: transparent;
 }
 
-.btn-like:hover,
-.btn-like:active {
+.btn-star:hover,
+.btn-star:active {
     color: #E84610;
     background: transparent;
     border: none;
 }
+

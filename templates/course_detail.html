@@ -1,17 +1,19 @@
 {% extends 'base.html' %} {% block content %}
+
 {% load crispy_forms_tags %}
 
 <div class="masthead">
     <div class="container">
         <div class="row g-0">
-            <!-- Course details -->
             <div class="col-md-6 masthead-text">
-                <h1 class="post-title">{{ course.title }}</h1>
-                <p class="post-subtitle">{{ course.delivery }} | {{ course.delivery_from }}</p>
+                <!-- course title goes in these h1 tags -->
+                <h1 class="course-title">{{ course.title }}</h1>
+                <!-- course author goes before the | the course's created date goes after -->
+                <p class="course-subtitle">{{ course.delivery }} | {{ course.delivery_from }} to {{ course.delivery_to }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
-                {% if "placeholder" in post.featured_image.url %}
+                {% if "placeholder" in course.featured_image.url %}
                 <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
                 {% else %}
                 <img src=" {{ course.featured_image.url }}" width="100%">
@@ -34,19 +36,19 @@
 
                     <div class="col-1">
                         <strong>
-                            {% if user.is_authenticated %}
+                            <!-- {% if user.is_authenticated %} -->
                             <form class="d-inline" action="{% url 'course_star' course.slug %}" method="POST">
                                 {% csrf_token %}
-                                {% if liked %}
-                                <button type="submit" name="blogpost_id" value="{{course.slug}}" class="btn-like"><i class="fas fa-heart"></i></button>
+                                {% if reviewed %}
+                                <button type="submit" name="course_id" value="{{course.slug}}" class="btn-star"><i class="fas fa-star"></i></button>
                                 {% else %}
-                                <button type="submit" name="blogpost_id" value="{{course.slug}}" class="btn-like"><i class="far fa-heart"></i></button>
+                                <button type="submit" name="course_id" value="{{course.slug}}" class="btn-star"><i class="far fa-star"></i></button>
                                 {% endif %}
                             </form>
                             {% else %}
-                            <span class="text-secondary"><i class="far fa-heart"></i></span>
+                            <span class="text-secondary"><i class="far fa-star"></i></span>
                             {% endif %}
-                        <!-- The number of stars goes before the closing strong tag -->
+                        <!-- The number of likes goes before the closing strong tag -->
                         <span class="text-secondary">{{ course.number_of_stars }} </span>
                         </strong>
                     </div>
@@ -68,20 +70,20 @@
     </div>
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3 ">
-            <h2>Reviews:</h2>
+            <h3>Review:</h3>
             <div class="card-body">
-                <!-- We want a for loop inside the empty control tags to iterate through each review in comments -->
+                <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
                 {% for review in reviews %}
                 <div class="reviews" style="padding: 10px;">
                     <p class="font-weight-bold">
-                        <!-- The reviewer's name goes here. Check the model if you're not sure what that is -->
+                        <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
                         {{ review.name }}
                         <span class=" text-muted font-weight-normal">
-                            <!-- The review's created date goes here -->
+                            <!-- The comment's created date goes here -->
                             {{ review.created_on }}
                         </span> wrote:
                     </p>
-                    <!-- The body of the review goes before the | -->
+                    <!-- The body of the comment goes before the | -->
                     {{ review.body | linebreaks }}
                 </div>
                 <!-- Our for loop ends here -->
@@ -98,7 +100,7 @@
                 {% else %}
                 {% if user.is_authenticated %}
 
-                <h3>Leave a review:</h3>
+                <h3>Add a review:</h3>
                 <p>Posting as: {{ user.username }}</p>
                 <form method="post" style="margin-top: 1.3em;">
                     {{ review_form | crispy }}
