@@ -74,6 +74,6 @@ class CourseStar(View):
         if course.stars.filter(id=request.user.id).exists():
             course.stars.remove(request.user)
         else:
-            post.stars.add(request.user)
+            course.stars.add(request.user)
 
         return HttpResponseRedirect(reverse('course_detail', args=[slug]))

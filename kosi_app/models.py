@@ -6,11 +6,16 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "Draft"), (1, "Published"))
-DELIVERY = ((1, "Classroom"), (2, "Online"), (3, "All"))
+# DELIVERY = ((1, "Classroom"), (2, "Online"), (3, "All"))
+DELIVERY = (
+    ('Classroom', '1'),
+    ('Online', '2'),
+    ('All', '3')
+)
 
 
 class Course(models.Model):
-    delivery = models.CharField(max_length=20, choices=DELIVERY, default=3)
+    delivery = models.CharField(max_length=20, null=True, blank=True, choices=DELIVERY, default=3)
     featured_image = CloudinaryField('image', default='placeholder')
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
