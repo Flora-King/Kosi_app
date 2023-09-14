@@ -38,6 +38,7 @@ class CourseDetail(View):
         queryset = Course.objects.filter(status=1)
         course = get_object_or_404(queryset, slug=slug)
         reviews = course.reviews.filter(approved=True).order_by("created_on")
+        stars = False
         if course.stars.filter(id=self.request.user.id).exists():
             stars = True
 
