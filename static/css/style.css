@@ -141,3 +141,6 @@ body {
     border: none;
 }
 
+.fab a:before {
+    color: white !important
+}
