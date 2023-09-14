@@ -56,14 +56,16 @@ body {
     margin-top: 10px;
     overflow: hidden;
     position: relative;
-    display: inline-block;
-    height: 33vh;
+    /* display: inline-block; */
+    /* height: 33vh; */
     width: 100%;
 }
 
 .masthead-text {
-    background-color: #445261;
-    color: white;
+    /* background-color: #445261; */
+    /* background-color: #d36a28;  */
+    /* color: white; */
+    color: black;
     position: relative;
 }
 
@@ -97,13 +99,13 @@ body {
 }
 
 .course-title {
-    margin-top: 20%;
+    margin-top: 30%;
     margin-left: 5%;
-}
+} 
 
 .course-subtitle {
     margin-left: 5%;
-    color: lightgray;
+    color: black;
 }
 
 .btn-signup {

@@ -2,27 +2,29 @@
 
 {% load crispy_forms_tags %}
 
-<div class="masthead">
-    <div class="container">
-        <div class="row g-0">
-            <div class="col-md-6 masthead-text">
-                <!-- course title goes in these h1 tags -->
-                <h3 class="course-title">{{ course.title }}</h3>
-                <p class="course-subtitle">{{ course.delivery }} | {{ course.delivery_from }} to {{ course.delivery_to }}</p>
-            </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
-                <!-- The featured image URL goes in the src attribute -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div class="image-container mt-5">
                 {% if "placeholder" in course.featured_image.url %}
-                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
+                <img class="card-img-top img-fluid" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
                 {% else %}
-                <img src=" {{ course.featured_image.url }}" width="100%">
+                <img class="card-img-top img-fluid" src=" {{ course.featured_image.url }}" width="100%">
                 {% endif %}
             </div>
         </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="course_delivery my-5">
+                <h3 class="course-title">{{ course.title }}</h3>
+                <p class="course-subtitle"> <strong>{{ course.delivery }}</strong> {{ course.delivery_from }} to {{ course.delivery_to }}</p>
+            </div>
+        </div>
+
     </div>
 </div>
+
 <div class="container">
-    <div class="row">
+        
         <div class="col card mb-3  mt-4 left top">
             <div class="card-body">
                 <!-- The course content goes inside the card-text. -->
@@ -65,7 +67,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-8 card mb-4  mt-3 ">
+        <div class="col-md-6 card mb-4  mt-3 ">
             <h3>Reviews:</h3>
             <h4>To add a review, please login first.</h4>
             <div class="card-body">
