@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div style="padding-top: 100px;">
+<!-- <div class="container-fluid" style="padding-top: 100px;">
     <p class="text-muted" style="text-align: center;  margin-top: 1.2em; padding: 10px 0;">
         Welcome to a course booking system worth using
         There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, 
@@ -11,7 +11,7 @@
         combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. 
         The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
     </p>
-</div>
+</div> -->
 <div class="container-fluid">
     <div class="row">
 
@@ -38,7 +38,7 @@
                                 <p class="card-text">{{ course.excerpt }}</p>
                             </a>
                             <hr />
-                            <p class="card-text text-muted h6">{{ course.delivery_from}} <i class="far fa-star"></i>
+                            <p class="card-text text-muted h6">{{ course.delivery_from}} to {{ course.delivery_to}}<i class="far fa-star"></i>
                                 {{ course.number_of_stars }}</p>
                         </div>
                     </div>

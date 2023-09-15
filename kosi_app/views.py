@@ -3,6 +3,25 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Course
 from .forms import ReviewForm
+from django.views.generic import ListView, DetailView
+from django.db.models import Q
+
+
+# class CourseSearch(ListView):
+#     model = Course
+#     queryset = Course.objects.all()
+
+#     def get_queryset(self, slug, *args, **kwargs):
+#         q = request.GET.get('q')
+
+#         if q:
+#             courses = Course.objects.filter(title__search=q)
+
+#         else:
+#             courses = None
+
+#         context = {'courses': courses}
+#         return render(request, 'base.html', context)
 
 
 class CourseList(generic.ListView):
@@ -27,6 +46,7 @@ class CourseDetail(View):
             "course_detail.html",
             {
                 "course": course,
+                # "slug": slug,
                 "reviews": reviews,
                 "commented": False,
                 "stars": stars,
