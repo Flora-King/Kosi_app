@@ -21,4 +21,5 @@ urlpatterns = [
     path('summernote/', include('django_summernote.urls')),
     path('', include('kosi_app.urls'), name='kosi.urls'),
     path('accounts/', include('allauth.urls')),
+    # path('search-page/', include('kosi_app.urls'), name='search_page.urls'),
 ]

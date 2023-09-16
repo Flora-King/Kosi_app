@@ -1,17 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<!-- <div class="container-fluid" style="padding-top: 100px;">
-    <p class="text-muted" style="text-align: center;  margin-top: 1.2em; padding: 10px 0;">
-        Welcome to a course booking system worth using
-        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, 
-        or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, 
-        you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend 
-        to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, 
-        combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. 
-        The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
-    </p>
-</div> -->
+
 <div class="container-fluid">
     <div class="row">
 
@@ -30,7 +20,7 @@
                                 <img class="card-img-top" src=" {{ course.featured_image.url }}">
                                 {% endif %}
                                 <div class="image-flash">
-                                    <p class="author">{{ course.delivery }}</p>
+                                    <p class="delivery">{{ course.delivery }}</p>
                                 </div>
                             </div>
                             <a href="{% url 'course_detail' course.slug %}" class="course-link">
@@ -46,8 +36,8 @@
                 {% if forloop.counter|divisibleby:3 %}
             </div>
             <div class="row">
-                {% endif %}
-                {% endfor %}
+            {% endif %}
+            {% endfor %}
 
             </div>
         </div>

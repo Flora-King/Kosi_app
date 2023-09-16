@@ -1,12 +1,10 @@
 from django.db import models
 from django.db.models import Model
 
-# my models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "Draft"), (1, "Published"))
-# DELIVERY = ((1, "Classroom"), (2, "Online"), (3, "All"))
 DELIVERY = (
     ('Classroom', '1'),
     ('Online', '2'),
@@ -24,11 +22,11 @@ class Course(models.Model):
     delivery_from = models.DateTimeField(auto_now_add=True)
     delivery_to = models.DateTimeField(auto_now_add=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    stars = models.ManyToManyField(User, related_name='stars', blank=True)
+    stars = models.ManyToManyField(User, related_name='course_stars', blank=True)
     status = models.IntegerField(choices=STATUS, default=0)
 
     class Meta:
-        ordering = ['price']
+        ordering = ['delivery_from']
 
     def __str__(self):
         return self.title

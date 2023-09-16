@@ -1,10 +1,11 @@
 body {
-    /* background-color: #F9FAFC; */
-    background-color: #F9FAFC;
+    background-color: #F9FAFC; 
+    /* background-color: rgb(250, 227, 217); */
+
 }
 
 .brand {
-    font-family: Lato, sans-serif;
+    font-family: Raleway, sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
     color: #4A4A4F;
@@ -57,8 +58,8 @@ body {
     margin-top: 10px;
     overflow: hidden;
     position: relative;
-    /* display: inline-block; */
-    /* height: 33vh; */
+    display: inline-block;
+    height: 33vh;
     width: 100%;
 }
 
@@ -96,7 +97,8 @@ body {
 
 .course-link:hover,
 .page-link {
-    color: #E84610;
+    /* color: #E84610; */
+    color: #99CCCC;
 }
 
 .course-title {
