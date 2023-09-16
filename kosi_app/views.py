@@ -46,7 +46,6 @@ class CourseDetail(View):
             "course_detail.html",
             {
                 "course": course,
-                # "slug": slug,
                 "reviews": reviews,
                 "commented": False,
                 "stars": stars,

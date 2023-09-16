@@ -5,10 +5,6 @@
 
 <head>
     <title>Kosi-app</title>
-
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
@@ -28,11 +24,12 @@
 <body class="d-flex flex-column h-100 main-bg">
 
     <!-- Navigation -->
-
+    <!-- <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">c<span class="red-o">o</span>de<span
+        class="thin">|star</span></span></span></a> -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">K<span class="red-o">o</span>si<span
-                        class="thin"></a>    
+            <a class="navbar-brand" href="{% url 'account_login' %}"><span class="brand">K<span class="red-o">o</span>si<span
+                class="thin"></span></span></span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -41,10 +38,7 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Courses</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Courses</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">

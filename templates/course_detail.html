@@ -19,6 +19,14 @@
                 <h3 class="course-title">{{ course.title }}</h3>
                 <p class="course-subtitle"> <strong>{{ course.delivery }}</strong> {{ course.delivery_from }} to {{ course.delivery_to }}</p>
             </div>
+            <div class="card-body">
+                <!-- The course content goes inside the card-text. -->
+                <!-- Use the | safe filter inside the template tags -->
+                <p class="card-text ">
+                    {{ course.course_content| safe }}
+                </p>
+            </div>
+            
         </div>
 
     </div>
@@ -26,38 +34,32 @@
 
 <div class="container">
         
-        <div class="col card mb-3 mt-4 left top">
-            <div class="card-body">
-                <!-- The course content goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
-                <p class="card-text ">{{ course.course_content| safe }}</p>
-                <div class="row">
-
-                    <div class="col-1">
-                        <strong>
-                            <!-- {% if user.is_authenticated %} -->
-                            <form class="d-inline" action="{% url 'course_star' course.slug %}" method="POST">
-                                {% csrf_token %}
-                                {% if reviewed %}
-                                <button type="submit" name="course_id" value="{{course.slug}}" class="btn-star"><i class="fas fa-star"></i></button>
-                                {% else %}
-                                <button type="submit" name="course_id" value="{{course.slug}}" class="btn-star"><i class="far fa-star"></i></button>
-                                {% endif %}
-                            </form>
+        <div class="col card mb-3 left top">
+            <div class="row">
+                <div class="col-1">
+                    <strong>
+                        <!-- {% if user.is_authenticated %} -->
+                        <form class="d-inline" action="{% url 'course_star' course.slug %}" method="POST">
+                            {% csrf_token %}
+                            {% if reviewed %}
+                            <button type="submit" name="course_id" value="{{course.slug}}" class="btn-star"><i class="fas fa-star"></i></button>
                             {% else %}
-                            <span class="text-secondary"><i class="far fa-star"></i></span>
+                            <button type="submit" name="course_id" value="{{course.slug}}" class="btn-star"><i class="far fa-star"></i></button>
                             {% endif %}
-                        <!-- The number of likes goes before the closing strong tag -->
+                        </form>
+                        {% else %}
+                        <span class="text-secondary"><i class="far fa-star"></i></span>
+                        {% endif %}
+                         <!-- The number of likes goes before the closing strong tag -->
                         <span class="text-secondary">{{ course.number_of_stars }} </span>
-                        </strong>
-                    </div>
-                    <div class="col-1">
-                        {% with reviews.count as total_reviews %}
-                        <strong class="text-secondary"><i class="far fa-comments"></i>
-                            <!-- Our total_comments variable goes before the closing strong tag -->
-                            {{ total_reviews }}</strong>
-                        {% endwith %}
-                    </div>
+                    </strong>
+                </div>
+                <div class="col-1">
+                    {% with reviews.count as total_reviews %}
+                    <strong class="text-secondary"><i class="far fa-comments"></i> 
+                        <!-- Our total_comments variable goes before the closing strong tag -->
+                        {{ total_reviews }}</strong>
+                    {% endwith %}
                 </div>
             </div>
         </div>
@@ -68,7 +70,7 @@
         </div>
     </div> 
     <div class="row">
-        <div class="col-md-8 card mb-4 mt-3">
+        <div class="col-md-8 card mb-4 mt-3 ">
             <h3>Reviews:</h3>
             <h4>To add a review, please login first.</h4>
             <div class="card-body">
@@ -90,7 +92,7 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="col-4 card mt-3">
+        <div class="col-md-4 card mb-4  mt-3 ">
             <div class="card-body">
                 <!-- For later -->
                 {% if reviewed %}
