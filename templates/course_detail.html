@@ -5,65 +5,62 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+        <div class="col-12 col-md-6 offset-lg-2 mt-5">
             <div class="image-container mt-5">
                 {% if "placeholder" in course.featured_image.url %}
                 <img class="card-img-top img-fluid" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
                 {% else %}
                 <img class="card-img-top img-fluid" src=" {{ course.featured_image.url }}" width="100%">
                 {% endif %}
+                <div class="course_delivery ">
+                    <h3 class="course-title">{{ course.title }}</h3>
+                    <p class="course-subtitle"> <strong>{{ course.delivery }}</strong> {{ course.delivery_from }} to {{ course.delivery_to }}</p>
+                </div>
+                <div class="card-body">
+                    <!-- The course content goes inside the card-text. -->
+                    <!-- Use the | safe filter inside the template tags -->
+                    <p class="card-text ">
+                        {{ course.course_content| safe }}
+                    </p>
+                </div>
+            </div>
+            <div class="container">
+        
+                <div class="col card mb-3 left top">
+                    <div class="row">
+                        <div class="col-1">
+                            <strong>
+                                <!-- {% if user.is_authenticated %} -->
+                                <form class="d-inline" action="{% url 'course_star' course.slug %}" method="POST">
+                                    {% csrf_token %}
+                                    {% if reviewed %}
+                                    <button type="submit" name="course_id" value="{{course.slug}}" class="btn-star"><i class="fas fa-star"></i></button>
+                                    {% else %}
+                                    <button type="submit" name="course_id" value="{{course.slug}}" class="btn-star"><i class="far fa-star"></i></button>
+                                    {% endif %}
+                                </form>
+                                {% else %}
+                                <span class="text-secondary"><i class="far fa-star"></i></span>
+                                {% endif %}
+                                 <!-- The number of likes goes before the closing strong tag -->
+                                <span class="text-secondary">{{ course.number_of_stars }} </span>
+                            </strong>
+                        </div>
+                        <div class="col-1">
+                            {% with reviews.count as total_reviews %}
+                            <strong class="text-secondary"><i class="far fa-comments"></i> 
+                                <!-- Our total_comments variable goes before the closing strong tag -->
+                                {{ total_reviews }}</strong>
+                            {% endwith %}
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="course_delivery my-5">
-                <h3 class="course-title">{{ course.title }}</h3>
-                <p class="course-subtitle"> <strong>{{ course.delivery }}</strong> {{ course.delivery_from }} to {{ course.delivery_to }}</p>
-            </div>
-            <div class="card-body">
-                <!-- The course content goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
-                <p class="card-text ">
-                    {{ course.course_content| safe }}
-                </p>
-            </div>
-            
-        </div>
-
     </div>
 </div>
 
-<div class="container">
-        
-        <div class="col card mb-3 left top">
-            <div class="row">
-                <div class="col-1">
-                    <strong>
-                        <!-- {% if user.is_authenticated %} -->
-                        <form class="d-inline" action="{% url 'course_star' course.slug %}" method="POST">
-                            {% csrf_token %}
-                            {% if reviewed %}
-                            <button type="submit" name="course_id" value="{{course.slug}}" class="btn-star"><i class="fas fa-star"></i></button>
-                            {% else %}
-                            <button type="submit" name="course_id" value="{{course.slug}}" class="btn-star"><i class="far fa-star"></i></button>
-                            {% endif %}
-                        </form>
-                        {% else %}
-                        <span class="text-secondary"><i class="far fa-star"></i></span>
-                        {% endif %}
-                         <!-- The number of likes goes before the closing strong tag -->
-                        <span class="text-secondary">{{ course.number_of_stars }} </span>
-                    </strong>
-                </div>
-                <div class="col-1">
-                    {% with reviews.count as total_reviews %}
-                    <strong class="text-secondary"><i class="far fa-comments"></i> 
-                        <!-- Our total_comments variable goes before the closing strong tag -->
-                        {{ total_reviews }}</strong>
-                    {% endwith %}
-                </div>
-            </div>
-        </div>
-    </div>
+
     <div class="row">
         <div class="col">
             <hr>
