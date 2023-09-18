@@ -13,25 +13,22 @@
       <h3>{% trans "Sign In" %}</h3>
 
 
-<p>{% blocktrans %}To leave a review or add a star to a course, please log in. 
-  If you have not created an account yet, then
-<a href="{{ signup_url }}">Sign Up</a> first.{% endblocktrans %}</p>
+    <p>{% blocktrans %}To leave a review or add a star to a course, please log in. 
+    If you have not created an account yet, then
+    <a href="{{ signup_url }}">Sign Up</a> first.{% endblocktrans %}</p>
 
   </div>
 </div>
-<div class="row">
-  <div class="col-md-8 mt-3 offset-md-2">
+<div class="row"> 
+  <div class="col-md-8 mt-3 offset-md-2"> 
+    <form class="login" method="POST" action="{% url 'account_login' %}"> {% csrf_token %} {{ form.as_p }} {% if redirect_field_value %} 
+      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" /> {% endif %} 
+      <!-- <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a> --> 
+      <button class="primaryAction" type="submit">{% trans "Sign In" %}
 
-  <form class="login" method="POST" action="{% url 'account_login' %}">
-    {% csrf_token %}
-    {{ form.as_p }}
-    {% if redirect_field_value %}
-    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-    {% endif %}
-    <!-- <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a> -->
-    <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
-  </form>
-  </div>
-</div>
-</div>
+      </button> 
+    </form> 
+  </div> 
+</div> 
+</div> 
 {% endblock %}
