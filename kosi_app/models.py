@@ -20,7 +20,6 @@ class Course(models.Model):
     excerpt = models.TextField(max_length=300)
     course_content = models.TextField(max_length=1500)
     delivery_from = models.DateTimeField(auto_now_add=True)
-    # delivery_to = models.DateTimeField(auto_now_add=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     stars = models.ManyToManyField(User, related_name='course_star', blank=True)
     status = models.IntegerField(choices=STATUS, default=0)

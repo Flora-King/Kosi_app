@@ -25,15 +25,24 @@
         </div>
     </div>
 </div>
-
+<div class="container">
+    <div class="row">
+        <div class="col-1 card-body ">
+            <!-- Post title goes in these h1 tags -->
+            <h1 class="curset-title">{{ course.title }}</h1>
+            <!-- delivery method goes before the | delivery date goes -->
+            <p class="card-text">{{ course.content}}</p>
+        </div>
+    </div>
+</div>
 <div class="container">
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
             <div class="card-body">
                 <!-- The course content goes inside the card-text. -->
-                <p class="card-text">
+                <!-- <p class="card-text">
                     {{ course.content | safe }}
-                </p>
+                </p> -->
                 <div class="row">
                     <div class="col-1">
                         <strong>
