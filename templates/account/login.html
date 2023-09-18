@@ -7,7 +7,19 @@
 
 {% block content %}
 
-<div class="container">
+<div class="container back-color ">
+  <div class="row">
+    <div class="col-md-8 mt-10 offset-md-2 app-tag">
+     
+      <p> "Sucess is no accident. It is hard work, perseverence, learning, studying, sacrifice and most of all,
+       love of what you are doing or learning to do", PELE</p>
+       <h1>Wellcome to Kosi the best course booking tool</h1>
+       <br>
+      <h1>Kosi is here for all your learning and studying needs</h1>
+      <br>
+  </div>
+</div>
+<div class="container back-color">
   <div class="row">
     <div class="col-md-8 mt-10 offset-md-2">
       <h3>{% trans "Sign In" %}</h3>
@@ -19,12 +31,11 @@
 
   </div>
 </div>
-<div class="row"> 
+<div class="row back-color"> 
   <div class="col-md-8 mt-3 offset-md-2"> 
     <form class="login" method="POST" action="{% url 'account_login' %}"> {% csrf_token %} {{ form.as_p }} {% if redirect_field_value %} 
       <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" /> {% endif %} 
-      <!-- <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a> --> 
-      <button class="primaryAction" type="submit">{% trans "Sign In" %}
+      <button class="primaryAction btn" type="submit">{% trans "Sign In" %}
 
       </button> 
     </form> 

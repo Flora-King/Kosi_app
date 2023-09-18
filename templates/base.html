@@ -18,15 +18,14 @@
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static 'images/logo.png' %}">
 
 </head>
 
-<body class="d-flex flex-column h-100 main-bg">
+<body class="d-flex flex-column h-100 main-bg back-color">
 
     <!-- Navigation -->
-    <!-- <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">c<span class="red-o">o</span>de<span
-        class="thin">|star</span></span></span></a> -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top dark-bg">
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'account_login' %}"><span class="brand">K<span class="red-o">o</span>si<span
                 class="thin"></span></span></span></a>
@@ -72,7 +71,7 @@
             </div>
         </div>
     </div>
-    <main class="flex-shrink-0 main-bg">
+    <main class="flex-shrink-0 main-bg back-color">
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
@@ -82,10 +81,10 @@
     <footer class="footer mt-auto py-3 dark-bg">
         <p class="m-0 text-center text-white">This website is created for education purposes only</p>
         <p class="m-0 text-center text-white">
-            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook website"><i class="fab fa-facebook-square ms-3"></i></a>
-            <a href="https://twitter.com/" target="_blank" aria-label="Twitter website"><i class="fab fa-twitter-square ms-3"></i></a>
-            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram website"><i class="fab fa-instagram-square ms-3"></i></a>
-            <a href="https://www.youtube.com/" target="_blank" aria-label="Youtube website"><i class="fab fa-youtube-square ms-3"></i></p></a>
+            <a href="https://www.facebook.com/Code.InstituteIRL/?locale=en_GB" target="_blank" rel="noopener" aria-label="Facebook website"><i class="fab fa-facebook-square ms-3"></i></a>
+            <a href="https://twitter.com/codeinstitute/status/1702668842655191230?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Etweet" target="_blank" aria-label="Twitter website"><i class="fab fa-twitter-square ms-3"></i></a>
+            <a href="https://www.instagram.com/codeinstitute/" target="_blank" aria-label="Instagram website"><i class="fab fa-instagram-square ms-3"></i></a>
+            <a href="https://www.youtube.com/channel/UCKRfPElX5ZJDoJavDqPrpKg" target="_blank" aria-label="Youtube website"><i class="fab fa-youtube-square ms-3"></i></p></a>
     </footer>
     <script>
         setTimeout(function () {
