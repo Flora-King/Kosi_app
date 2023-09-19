@@ -1,4 +1,4 @@
-{% load static %}
+{% load static %} 
 
 <!DOCTYPE html>
 <html class="h-100">
@@ -72,9 +72,11 @@
         </div>
     </div>
     <main class="flex-shrink-0 main-bg back-color">
+
         {% block content %}
-        <!-- Content Goes here -->
+        <!-- Course detail from course_detail page -->
         {% endblock content %}
+
     </main>
 
     <!-- Footer -->
@@ -86,6 +88,10 @@
             <a href="https://www.instagram.com/codeinstitute/" target="_blank" aria-label="Instagram website"><i class="fab fa-instagram-square ms-3"></i></a>
             <a href="https://www.youtube.com/channel/UCKRfPElX5ZJDoJavDqPrpKg" target="_blank" aria-label="Youtube website"><i class="fab fa-youtube-square ms-3"></i></p></a>
     </footer>
+    {% block extras %}
+
+    {{ block.super }}
+
     <script>
         setTimeout(function () {
             let messages = document.getElementById('msg');
@@ -93,6 +99,8 @@
             alert.close();
         }, 2000);
     </script>
+
+{% endblock %}
 </body>
 
 </html>

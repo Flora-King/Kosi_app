@@ -11,6 +11,7 @@ class CourseList(generic.ListView):
     This view displays the course list with related images
     Also displays the course excerpt which links user to the course content
     """
+
     model = Course
     queryset = Course.objects.filter(status=1).order_by("-delivery_from")
     template_name = "index.html"
@@ -65,6 +66,7 @@ def course_star(request, slug, *args, **kwargs):
     """
     This view enables user to update the stars.
     """
+
     course = get_object_or_404(Course, slug=slug)
 
     if request.method == "POST" and request.user.is_authenticated:
@@ -78,7 +80,7 @@ def course_star(request, slug, *args, **kwargs):
 
 def review_delete(request, slug, review_id, *args, **kwargs):
     """
-    This view enables user to delete reviews
+    This view allows the user to delete own reviews
     """
 
     queryset = Course.objects.filter(status=1)
@@ -91,8 +93,7 @@ def review_delete(request, slug, review_id, *args, **kwargs):
     else:
         messages.add_message(
             request, messages.ERROR,
-            'Please only delete your reviews!'
-            )
+            'You can only delete your own reviews!')
 
     return HttpResponseRedirect(reverse('course_detail', args=[slug]))
 
@@ -105,8 +106,7 @@ def review_edit(request, slug, review_id, *args, **kwargs):
 
         queryset = Course.objects.filter(status=1)
         course = get_object_or_404(queryset, slug=slug)
-        review = course.creviews.filter(id=creview_id).first()
-
+        review = course.reviews.filter(id=review_id).first()
         review_form = ReviewForm(data=request.POST, instance=review)
         if review_form.is_valid() and review.name == request.user.username:
             review = review_form.save(commit=False)

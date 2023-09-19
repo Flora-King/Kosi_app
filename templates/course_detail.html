@@ -4,17 +4,13 @@
 
 <div class="masthead">
     <div class="container">
+    <!-- course title, delivery method and delivery date -->
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
-                <!-- Post title goes in these h1 tags -->
                 <h1 class="curset-title">{{ course.title }}</h1>
-                <!-- delivery method goes before the | delivery date goes -->
-                <p class="course-subtitle"><strong>{{ course.delivery }}</strong> | from {{ course.delivery_from }} at <strong>£{{ course.price }}</strong></p>
-                
+                <p class="course-subtitle"><strong>{{ course.delivery }}</strong> | from {{ course.delivery_from }} at <strong>£{{ course.price }}</strong></p>      
             </div>
-
             <div class="d-none d-md-block col-md-6 masthead-image">
-                <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in course.featured_image.url %}
                 <img src="{% static 'images/logo.png' %}" class="scale" alt="placeholder">
                 {% else %}
@@ -25,14 +21,15 @@
         </div>
     </div>
 </div>
+<!-- course content -->
 <div class="container">
     <div class="row">
         <div class="col-1 card-body ">
-            <!-- course content goes here-->
             <p class="card-text">{{ course.course_content}}</p>
         </div>
     </div>
 </div>
+<!-- reviews and stars count-->
 <div class="container">
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
@@ -54,13 +51,11 @@
                             {% else %}
                             <span class="text-secondary"><i class="far fa-star"></i></span>
                             {% endif %}
-                            <!-- The number of stars goes before the closing strong tag -->
                             <span class="text-secondary">{{ course.number_of_stars }} </span>
                         </strong>
                     </div>
                     <div class="col-1">
                         <strong class="text-secondary"><i class="far fa-comments"></i>
-                            <!-- Our total_reviews variable goes before the closing strong tag -->
                             {{ review_count }}</strong>
                     </div>
                 </div>
@@ -72,23 +67,20 @@
             <hr>
         </div>
     </div>
+    <!-- Reviews display section -->
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3 ">
             <h3>REVIEWS:</h3>
             <div class="card-body">
-                <!-- We want a for loop inside the empty control tags to iterate through each review in reviews -->
                 {% for review in reviews %}
                 <div class="reviews{% if not review.approved and review.name == user.username %} faded{% elif not review.approved %} d-none{% endif %}"
                     style="padding: 10px;">
                     <p class="font-weight-bold">
-                        <!-- The reviewer's name goes here. Check the model if you're not sure what that is -->
                         <strong>{{ review.name }}</strong> 
                         <span class="font-weight-normal">
-                            <!-- The review's created date goes here -->
                             on {{ review.created_on }}
                         </span> wrote:
                     </p>
-                    <!-- The body of the review goes before the | -->
                     <div id="review{{ review.id }}">
                         {{ review.body | linebreaks }}
                     </div>
@@ -99,13 +91,12 @@
                     <button class="btn btn-edit" review_id="{{ review.id }}">Edit</button>
                     {% endif %}
                 </div>
-                <!-- Our for loop ends here -->
                 {% endfor %}
             </div>
         </div>
+        <!-- Reviews text area -->
         <div class="col-md-4 card mb-4  mt-3 ">
             <div class="card-body">
-                <!-- For later -->
                 {% if user.is_authenticated %}
 
                 <h3>Leave a review:</h3>
@@ -122,7 +113,7 @@
         </div>
     </div>
 </div>
-
+    <!-- reviews delete and update -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -140,7 +131,6 @@
         </div>
     </div>
 </div>
-
 
 {% endblock content %}
 

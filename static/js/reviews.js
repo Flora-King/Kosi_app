@@ -2,9 +2,10 @@ const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
 var deleteButtons = document.getElementsByClassName("btn-delete");
 var editButtons = document.getElementsByClassName("btn-edit");
 var deleteConfirm = document.getElementById("deleteConfirm");
-var reviewText = document.getElementByTagName("textarea") [0];
+var reviewText = document.getElementsByTagName("textarea")[0];
 var reviewForm = document.getElementById("reviewForm");
 var submitForm = document.getElementById("submitButton");
+
 
 // to clear the review textarea box
 
