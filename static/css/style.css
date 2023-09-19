@@ -176,20 +176,21 @@ body {
     background-color: #e4e2e1;
 }
 
-.nav-link {
+.nav-link, .navbar-nav, .nav-light, .active {
     color: #e4e2e1;
 }
+
 
 .app-tag {
     margin-top: 50px;
     
 }
 
-.app-tag p {
+/* .app-tag p {
 
 
 }
 
 .app-tag h1 {
 
-}
+} */

@@ -8,9 +8,8 @@ from .forms import ReviewForm
 
 class CourseList(generic.ListView):
     """
-    This is Django's generic ListView. We are a little limited as to
-    what we can do with this, but if we really needed to, we could
-    access the request object here too.
+    This view displays the course list with related images
+    Also displays the course excerpt which links user to the course content
     """
     model = Course
     queryset = Course.objects.filter(status=1).order_by("-delivery_from")
@@ -20,14 +19,7 @@ class CourseList(generic.ListView):
 
 def course_detail(request, slug, *args, **kwargs):
     """
-    A function-based view to view the detail of a course.
-    Largely the same as the class-based, but we don't have
-    different methods for GET and POST. Because it's not a
-    class, all of the extra "self" stuff is removed too.
-
-    Functionally, it's the same, but it is a bit clearer
-    what's going on. To differentiate between request methods,
-    we use request.method == "GET" or request.method == "POST"
+    This view displays the course title, content, reviews and stars
     """
 
     queryset = Course.objects.filter(status=1)
@@ -67,7 +59,7 @@ def course_detail(request, slug, *args, **kwargs):
     )
 
 
-def post_like(request, slug, *args, **kwargs):
+def course_star(request, slug, *args, **kwargs):
     """
     This view enables user to update the stars.
     """
@@ -86,6 +78,7 @@ def review_delete(request, slug, review_id, *args, **kwargs):
     """
     This view enables user to delete reviews
     """
+
     queryset = Course.objects.filter(status=1)
     course = get_object_or_404(queryset)
     review = course.reviews.filter(id=review_id).first()
@@ -94,7 +87,7 @@ def review_delete(request, slug, review_id, *args, **kwargs):
         review.delete()
         messages.add_message(request, messages.SUCCESS, 'Review deleted!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own reviews!')
+        messages.add_message(request, messages.ERROR, 'Please only delete your reviews!')
 
     return HttpResponseRedirect(reverse('course_detail', args=[slug]))
 
@@ -115,7 +108,7 @@ def review_edit(request, slug, review_id, *args, **kwargs):
             review.course = course
             review.approved = False
             review.save()
-            messages.add_message(request, messages.SUCCESS, 'Review Successfully Updated!')
+            messages.add_message(request, messages.SUCCESS, 'Review Updated!')
         else:
             messages.add_message(request, messages.ERROR, 'Error updating review!')
 

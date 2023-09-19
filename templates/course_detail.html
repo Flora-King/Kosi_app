@@ -9,7 +9,7 @@
                 <!-- Post title goes in these h1 tags -->
                 <h1 class="curset-title">{{ course.title }}</h1>
                 <!-- delivery method goes before the | delivery date goes -->
-                <p class="course-subtitle">{{ course.delivery }} | {{ course.delivery_from }} {{ course.content}}</p>
+                <p class="course-subtitle"><strong>{{ course.delivery }}</strong> | from {{ course.delivery_from }} at <strong>£{{ course.price }}</strong></p>
                 
             </div>
 
@@ -28,10 +28,8 @@
 <div class="container">
     <div class="row">
         <div class="col-1 card-body ">
-            <!-- Post title goes in these h1 tags -->
-            <h1 class="curset-title">{{ course.title }}</h1>
-            <!-- delivery method goes before the | delivery date goes -->
-            <p class="card-text">{{ course.content}}</p>
+            <!-- course content goes here-->
+            <p class="card-text">{{ course.course_content}}</p>
         </div>
     </div>
 </div>
@@ -39,10 +37,6 @@
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
             <div class="card-body">
-                <!-- The course content goes inside the card-text. -->
-                <!-- <p class="card-text">
-                    {{ course.content | safe }}
-                </p> -->
                 <div class="row">
                     <div class="col-1">
                         <strong>
@@ -60,7 +54,7 @@
                             {% else %}
                             <span class="text-secondary"><i class="far fa-star"></i></span>
                             {% endif %}
-                            <!-- The number of likes goes before the closing strong tag -->
+                            <!-- The number of stars goes before the closing strong tag -->
                             <span class="text-secondary">{{ course.number_of_stars }} </span>
                         </strong>
                     </div>
@@ -122,7 +116,7 @@
                     <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
                 </form>
                 {% else %}
-                <h3>To add a review, <a href="{% url 'account_login' %}">Log in</a> first.</h3>
+                <h3><a href="{% url 'account_login' %}">Log in</a> to add a review/a star.</h3>
                 {% endif %}
             </div>
         </div>
@@ -150,7 +144,7 @@
 
 {% endblock content %}
 
-<!-- {% block extras %}
+{% block extras %}
 {% load static %}
-<script src="{% static 'js/comments.js' %}"></script> 
-{% endblock extras %} -->
+<script src="{% static 'js/reviews.js' %}"></script> 
+{% endblock extras %}
