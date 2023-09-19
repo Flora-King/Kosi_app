@@ -40,7 +40,9 @@ def course_detail(request, slug, *args, **kwargs):
             review = review_form.save(commit=False)
             review.course = course
             review.save()
-            messages.add_message(request, messages.SUCCESS, 'Review awaiting check.')
+            messages.add_message(
+                request, messages.SUCCESS,
+                'Review awaiting check.')
         else:
             review_form = ReviewForm()
     else:
@@ -87,7 +89,10 @@ def review_delete(request, slug, review_id, *args, **kwargs):
         review.delete()
         messages.add_message(request, messages.SUCCESS, 'Review deleted!')
     else:
-        messages.add_message(request, messages.ERROR, 'Please only delete your reviews!')
+        messages.add_message(
+            request, messages.ERROR,
+            'Please only delete your reviews!'
+            )
 
     return HttpResponseRedirect(reverse('course_detail', args=[slug]))
 
@@ -110,6 +115,9 @@ def review_edit(request, slug, review_id, *args, **kwargs):
             review.save()
             messages.add_message(request, messages.SUCCESS, 'Review Updated!')
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating review!')
+            messages.add_message(
+                request, messages.ERROR,
+                'Error updating review!'
+                )
 
     return HttpResponseRedirect(reverse('course_detail', args=[slug]))
