@@ -38,7 +38,7 @@
                     <div class="col-1">
                         <strong>
                             {% if user.is_authenticated %}
-                            <form class="d-inline" action="{% url 'course_detail' course.slug %}" method="POST">
+                            <form class="d-inline" action="{% url 'course_star' course.slug %}" method="POST">
                                 {% csrf_token %}
                                 {% if reviewed %}
                                 <button type="submit" name="course_id" value="{{course.slug}}" class="btn-star"
@@ -113,7 +113,7 @@
         </div>
     </div>
 </div>
-    <!-- reviews delete and update -->
+    <!-- reviews delete, update -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -126,7 +126,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <a id="deleteConfirm" href="#" class="btn btn-danger">Delete</a>
+                <a id="deleteConfirm" href="course_detail.html" class="btn btn-danger">Delete</a>
             </div>
         </div>
     </div>
