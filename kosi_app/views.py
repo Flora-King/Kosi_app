@@ -83,9 +83,6 @@ def review_delete(request, slug, review_id, *args, **kwargs):
     This view allows user to delete own reviews
     """
 
-    # queryset = Course.objects.filter(status=1)
-    # course = get_object_or_404(queryset)
-    # review = course.reviews.filter(id=review_id).first()
     review = get_object_or_404(Review, id=review_id)
     review_form = ReviewForm(data=request.POST, instance=review)
     if review.name == request.user.username:
