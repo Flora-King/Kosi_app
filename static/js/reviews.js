@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
 var deleteButtons = document.getElementsByClassName("btn-delete");
 var editButtons = document.getElementsByClassName("btn-edit");

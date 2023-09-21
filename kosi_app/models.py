@@ -42,7 +42,6 @@ class Review(models.Model):
     course = models.ForeignKey(
         Course, on_delete=models.CASCADE, related_name='reviews'
         )
-    # review = Review.objects.get(primaryKey=review_id)
     name = models.CharField(max_length=80)
     email = models.EmailField()
     body = models.TextField()

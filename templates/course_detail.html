@@ -3,14 +3,14 @@
 {% load crispy_forms_tags %}
 
 <div class="masthead">
-    <div class="container">
+    <div class="container mt-auto">
     <!-- course title, delivery method and delivery date -->
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
                 <h1 class="curset-title">{{ course.title }}</h1>
                 <p class="course-subtitle"><strong>{{ course.delivery }}</strong> | from {{ course.delivery_from }} at <strong>£{{ course.price }}</strong></p>      
             </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
+            <div class="d-none d-md-block col-md-6">
                 {% if "placeholder" in course.featured_image.url %}
                 <img src="{% static 'images/logo.png' %}" class="scale" alt="placeholder">
                 {% else %}
@@ -24,7 +24,7 @@
 <!-- course content -->
 <div class="container">
     <div class="row">
-        <div class="col-1 card-body ">
+        <div class="col-1 card-body">
             <p class="card-text">{{ course.course_content}}</p>
         </div>
     </div>
