@@ -122,43 +122,42 @@ These user stories have been elaborated with acceptance criteria.
 
 For detailed view of the user stories please visit the [project board](https://github.com/Flora-King/Kosi_app/projects?query=is%3Aopen)
 
-| REF No | USER STORY TITLE            | USER STORY DESCRIPTION                                                                                                      | PRIORITY    | STATUS      |
-|--------|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------|-------------|-------------|
-| 18     | User login process          | As a **site user** I can **log into the website** so that i can add or update my reviews                                            | MUST HAVE   | DONE        |
-| 17     | approve posted reviews      | As a **site admin** I can approve or disapprove posted reviews so that i can remove subjective or rude commentary               | MUST HAVE   | DONE        |
-| 16     | create draft course content | As a **site admin** I can create draft courses so that i can complete writing content later                                     | SHOULD HAVE | DONE        |
-| 15     | manage course content       | As a **site admin** I can create, read, update, and delete course content so that all the course content is upto date           | MUST HAVE   | DONE        |
-| 14     | view reviews                | As **all users** I can view course recommendations details against each course so that i can read reviews left by other users | MUST HAVE   | DONE        |
-| 13     | view star ratings           | As **all users** I can view star ratings against each course so that i can view courses by star rating                        | MUST HAVE   | DONE        |
-| 12     | add a review                | As a **site user** I can add a review against any course so that i can share my experience                                      | MUST HAVE   | DONE        |
-| 11     | add a star rating           | As a **site user** I can add rating stars against any course so that i share my star rating for a course                        | MUST HAVE   | DONE        |
-| 10     | Account registration        | As a **site user** I can register an account so that i can have access to personal profile                                      | MUST HAVE   | DONE        |
-| 6      | View course details         | As a **site user** I can view course details so that i can view full course details                                             | SHOULD HAVE | DONE        |
-| 4      | couse list pagination       | As a **site user** I can view all courses available so that i can choose ones i am interested in taking                         | SHOULD HAVE | DONE        |
-| 7      | Register for a course       | As a **site user** I can register for a course so that i can attend that course                                                 | COULD HAVE  | NOT STARTED |
-| 8      | View my booked courses      | As a **site user**I can view courses i have booked/registered for so that i am aware of my course schedule                     | COULD HAVE  | NOT STARTED |
-|        |                             |                                                                                                                             |             |             |
+| REF No | USER STORY TITLE            | USER STORY DESCRIPTION                                                                                                        | PRIORITY    | STATUS   | SCOPE  |
+|--------|-----------------------------|-------------------------------------------------------------------------------------------------------------------------------|-------------|----------|--------|
+| 18     | User login process          | As a site user I can log into the website so that i can add or update my reviews                                              | MUST HAVE   | DONE     | IN     |
+| 10     | Account registration        | As a site user I can register an account so that i can have access to personal profile                                        | MUST HAVE   | DONE     | IN     |
+| 15     | manage course content       | As a site admin I can create, read, update, and delete course content so that all the course content is upto date             | MUST HAVE   | DONE     | IN     |
+| 16     | create draft course content | As a site admin I can create draft courses so that i can complete writing content later                                       | SHOULD HAVE | DONE     | IN     |
+| 6      | View course details         | As a site user I can view course details so that i can view full course details                                               | SHOULD HAVE | DONE     | IN     |
+| 4      | couse list pagination       | As a site user I can naviigate easily through the course list so that i can see all courses on different pages of the website | SHOULD HAVE | DONE     | IN     |
+| 11     | add a star rating           | As a site user I can add rating stars against any course so that i share my star rating for a course                          | MUST HAVE   | DONE     | IN     |
+| 12     | add a review                | As a site user I can add a review against any course so that i can share my experience                                        | MUST HAVE   | DONE     | IN     |
+| 17     | approve posted reviews      | As a site admin I can approve or disapprove posted reviews so that i can remove subjective or rude commentary                 | MUST HAVE   | DONE     | IN     |
+| 14     | view reviews                | As a all users I can view course recommendations details against each course so that i can read reviews left by other users   | MUST HAVE   | DONE     | IN     |
+| 13     | view star ratings           | As a all users I can view star ratings against each course so that i can view courses by star rating                          | MUST HAVE   | DONE     | IN     |
+| 7      | Register for a course       | As a site user I can register for a course so that i can attend that course                                                   | COULD HAVE  | NOT DONE | Future |
+| 8      | View my booked courses      | As a site user I can view courses i have booked/registered for so that i am aware of my course schedule                       | COULD HAVE  | NOT DONE | Future |
 
+
+`**Tasks**` linked to each of the user stories detailed in the [Stories and Tasks file](/workspace/Kosi_app/StoriesandTasks.md)
 
 ### **`Templates`** created for this web app and will be in active use for this app are:
 User Registration - created to enable the user to create an account in order to access various areas of this web app
 User Login - created to enable
 Course_Detail
-all items view
-item detail
-Add item
-edit item
-Delete item
+base html
+Course detail
+
 
 
 ## TECHNOLOGIES USED
 
 * **HTML** - To create the Django templates for the associated views and models in the project applications.
 * **CSS** - To style the website.
-* **JavaScript** - To create interactive animations for the site.
+* **JavaScript** - To enable a dynamic update and delete functions for the user on reviews awaiting approval. Also used to 
 * **Python** – Is the primary language of Django and used to create all forms, models and views.
 
-* **W3C HTML Validator**
+* **W3C HTML Validator** - fpr 
 * **W3C CSS Validator**
 * **JS Hint**
 * **CI Python checker**
@@ -173,6 +172,12 @@ lighthouse testing results
 
 
 Code validation
+
+* **W3C HTML Validator**
+* **W3C CSS Validator**
+* **JS Hint**
+* **CI Python checker**
+* **Lighhouse**
 
 User stories testing
 For a detailed view of the manual tests carried out for all the user stories, see [the ManualTestwriteup.md file](https://github.com/Flora-King/Kosi_app)

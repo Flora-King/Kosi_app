@@ -30,3 +30,9 @@ for (let button of editButtons) {
         reviewForm.setAttribute("action", `edit_review/${reviewId}`);
     });
 }
+
+setTimeout(function () {
+    let messages = document.getElementById('msg');
+    let alert = new bootstrap.Alert(messages);
+    alert.close();
+}, 2000);
