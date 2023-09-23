@@ -177,12 +177,44 @@ body {
 
 .back-color {
     background-color: #e4e2e1;
+
 }
 
 .app-tag {
     margin-top: 50px;
     
 }
+
+
+.text-box h2 {
+    font-size: 40px;
+    font-weight: 500px;
+    text-align: center;
+
+}
+
+/* login and register page animations */ 
+
+.text-box h1 {
+    text-align: center;
+    font-style: italic;
+    font-size: 100px;
+    line-height: 100px;
+    color: transparent;
+    -webkit-text-stroke: 2px #000000;
+    background-image: url(../images/logo.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 30s linear infinite;
+
+}
+@keyframes back {
+    100% {
+        background-position: 2000px 0;
+    }
+}
+
+
 
 /* media queries */
 
