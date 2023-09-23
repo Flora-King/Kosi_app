@@ -70,7 +70,7 @@
     <!-- Reviews display section -->
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3 ">
-            <h3>REVIEWS:</h3>
+            <h4>REVIEWS:</h4>
             <div class="card-body">
                 {% for review in reviews %}
                 <div class="reviews{% if not review.approved and review.name == user.username %} faded{% elif not review.approved %} d-none{% endif %}"
@@ -99,7 +99,7 @@
             <div class="card-body">
                 {% if user.is_authenticated %}
 
-                <h3>Leave a review:</h3>
+                <h4>Leave a review:</h4>
                 <p>Posting as: {{ user.username }}</p>
                 <form id="reviewForm" method="post" style="margin-top: 1.3em;">
                     {{ review_form | crispy }}

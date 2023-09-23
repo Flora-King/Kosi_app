@@ -1,17 +1,20 @@
 body {
     background-color: #F9FAFC;
     margin-top: 100px;
+    font-family: Lato, sans-serif;
 }
 
 .brand {
     font-family: Lato, sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #e4e2e1;
+    font-style: italic;
 }
 
 .red-o {
-    color: #E84610;
+    /* color: #E84610; */
+    color: #459e9e;
 }
 
 .thin {
@@ -23,8 +26,6 @@ body {
 }
 
 .dark-bg-nav {
-    /* background-color: #445261; */
-    /* background-color:#323232; */
     color: #e4e2e1;
     background-color: black;
 }
@@ -33,10 +34,6 @@ body {
     background-color:#323232;
     color: #e4e2e1;
 }
-
-/* .main-bg {
-    background-color: #F9FAFC;
-} */
 
 .card {
     border: none;
@@ -67,7 +64,6 @@ body {
 }
 
 .masthead {
-    /* margin-top: 100px; */
     margin-top: auto;
     overflow: hidden;
     position: relative;
@@ -122,6 +118,7 @@ body {
 .btn-edit {
     background-color: #23BBBB;
     color: #fff;
+    border: none;
 }
 
 .btn-signup:hover,
@@ -185,11 +182,16 @@ body {
     
 }
 
-
 .text-box h2 {
     font-size: 40px;
-    font-weight: 500px;
+    font-weight: 500;
     text-align: center;
+
+}
+
+.page-link {
+    background-color: #323232;
+    color: #e4e2e1;
 
 }
 
