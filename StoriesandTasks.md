@@ -1,6 +1,6 @@
 # KOSI
 
-**Helpful links**
+**Below are links to other readme content**
 
 - Live website for Kosi
 - [project board](https://github.com/Flora-King/Kosi_app/projects?query=is%3Aopen)
@@ -74,3 +74,6 @@ For detailed view of the user stories please visit the [project board](https://g
 | 8      | View my booked courses      | As a site user I can view courses i have booked/registered for so that i am aware of my course schedule                       | COULD HAVE  |                                                                         | NOT DONE | Future |
 
 
+***
+***
+**Return to the [README.me](https://github.com/Flora-King/Kosi_app) file for the rest of the readme content**

@@ -31,6 +31,7 @@ MANUAL TESTING WRITE UP FOR KOSI web app
 - [ ] successfully signed in/logged in
 - [ ] user logged in
 
+![login page](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/49eccb53-e921-47d6-b4bc-2636c21aa3ab)
 ![successfully logged in](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/f5a55e2e-870f-4161-9535-41fa731daade)
 
 **`TEST SCENARIO 2: ability to log out of the personal account`**
@@ -84,7 +85,7 @@ MANUAL TESTING WRITE UP FOR KOSI web app
 - [ ] user logged in
 - [ ] user profile is successfully created
 
-![Registration page](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/70e44d3b-e5ce-4262-8bcb-ebf78c4edff3)
+![Registration page](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/e5a2ec95-b55f-4d50-ace8-244dd638fe31)
 
 ![succesfully registered and logged in ](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/2dbcd726-78cb-4f22-932b-52a0e6432341)
 
@@ -142,7 +143,7 @@ MANUAL TESTING WRITE UP FOR KOSI web app
 **`Actual outcome`**
 - [ ] review is presented in non-faded text without 'delete' and 'edit' buttons
 
-[image image](mmmmmmmmm)
+![Reviews approved seen below course content](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/b5743164-d49a-49ef-8419-ea8f258d0de3)
 
 **`TEST CASE 3: user can update a review whilst logged into site with personal profile`**
 
@@ -203,6 +204,8 @@ MANUAL TESTING WRITE UP FOR KOSI web app
 - [ ] review is successfully deleted
 
 ![Logged in and ready to delete a review](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/26be799d-ee94-4498-877a-dced12a83125)
+
+
 ![Review successfully deleted](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/ab4fb4fc-8aaf-490b-8ca5-227e87880cec)
 
 ***
@@ -498,32 +501,6 @@ MANUAL TESTING WRITE UP FOR KOSI web app
 ![star ratings on course content page](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/aa96c8c2-8271-43a4-a27c-2caa047b5b42)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ***
 ***
-* Tests outstanding 
-
-2. Test that a notification is sent to the user who created the review **`not achieved/not built`**
-
-
-REFERENCES
+**Return to the [README.me](https://github.com/Flora-King/Kosi_app) file for the rest of the readme content**
