@@ -1,4 +1,3 @@
-
 MANUAL TESTING WRITE UP FOR KOSI web app
 
 
@@ -32,7 +31,7 @@ MANUAL TESTING WRITE UP FOR KOSI web app
 - [ ] successfully signed in/logged in
 - [ ] user logged in
 
-ADD SCREENSHOT HERE
+![successfully logged in](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/f5a55e2e-870f-4161-9535-41fa731daade)
 
 **`TEST SCENARIO 2: ability to log out of the personal account`**
 
@@ -54,7 +53,8 @@ ADD SCREENSHOT HERE
 - [ ] successfully logged out
 
 
-ADD SCREENSHOT HERE
+![Warning before log out](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/9aeeb56c-234c-4348-b334-2152fe2d8c1b)
+![successfully logged out](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/cf7a1a1c-4dbb-4a5d-84e0-56810872fd6d)
 
 ***
 
@@ -84,7 +84,9 @@ ADD SCREENSHOT HERE
 - [ ] user logged in
 - [ ] user profile is successfully created
 
-ADD SCREENSHOT HERE
+![Registration page](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/70e44d3b-e5ce-4262-8bcb-ebf78c4edff3)
+
+![succesfully registered and logged in ](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/2dbcd726-78cb-4f22-932b-52a0e6432341)
 
 
 ***
@@ -117,6 +119,8 @@ ADD SCREENSHOT HERE
 - [ ] 'Review awaiting approval' is presented
 - [ ] review is presented in faded text with a 'delete' and 'edit' buttons
 
+![Logged in and ready to edit review](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/5feeb003-fa0a-4bd8-aca3-645e2d5e95b2)
+
 **`TEST CASE 2: user can read a review whilst logged into site with personal profile`**
 
 **`Preconditions`**
@@ -137,6 +141,8 @@ ADD SCREENSHOT HERE
 
 **`Actual outcome`**
 - [ ] review is presented in non-faded text without 'delete' and 'edit' buttons
+
+[image image](mmmmmmmmm)
 
 **`TEST CASE 3: user can update a review whilst logged into site with personal profile`**
 
@@ -166,6 +172,8 @@ ADD SCREENSHOT HERE
 - [ ] 'Review awaiting approval' message is presented to user
 - [ ] review  with updated text [awaiting approval] is presented in faded text with 'delete' and 'edit' buttons
 
+![Review successfully edited](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/05031dc1-6707-4b87-9ad9-5eae70fad6b0)
+
 **`TEST CASE 4: user can delete a review whilst logged into site with personal profile`**
 
 **`Preconditions`**
@@ -194,6 +202,8 @@ ADD SCREENSHOT HERE
 - [ ] 'Review deleted' message is presented to user
 - [ ] review is successfully deleted
 
+![Logged in and ready to delete a review](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/26be799d-ee94-4498-877a-dced12a83125)
+![Review successfully deleted](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/ab4fb4fc-8aaf-490b-8ca5-227e87880cec)
 
 ***
 **TEST CASE NAME: CREATE DRAFT COURSE CONTENT**
@@ -224,8 +234,9 @@ ADD SCREENSHOT HERE
 - [ ] course is created in admin site with status set to draft
 - [ ] course is not visible in the front end by all users including Site admin
 
+![course list in admin site with status](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/c77df1d6-1882-4f40-ab8c-b65c6866b0d2)
 
-**TEST CASE NAME : 
+![course still in draft state](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/b53425ff-d0e1-4886-b4e7-292a4fdc7cfe)
 
 **`TEST CASE 2:`** ability to re-edit already published course content
 
@@ -258,6 +269,7 @@ ADD SCREENSHOT HERE
 - [ ] course is also created in the front end site and visible by all users including Site admin
 - [ ] amended course details are visible/accessible in the front end site and admin site
 
+![course in published state but still editable in admin site](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/1bce2888-2980-4e1f-bb93-e7ae6e1f9e35)
 
 ***
 **TEST CASE NAME: VIEW COURSE DETAILS**
@@ -280,6 +292,10 @@ ADD SCREENSHOT HERE
 
 **`Actual outcome`**
 - [ ] course content is revealed and clearly visible
+
+![course-excerpt link to course content](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/05715bd1-457b-49e6-86c5-37fd108567fe)
+
+![Course_content page](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/7aaafa0a-ba64-4bb8-8b90-d6a35aade8aa)
 
 ***
 **TEST CASE NAME: ADD A REVIEW**
@@ -311,6 +327,7 @@ ADD SCREENSHOT HERE
 - [ ] 'Review awaiting approval' is presented
 - [ ] review is presented in faded text with a 'delete' and 'edit' buttons
 
+![logged in and ready to add a review](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/c96c12ad-bbc9-459c-8025-981ed6f6d1a5)
 
 **`TEST CASE 2: the review is visible under the course following approval by the site admin`**
 
@@ -340,6 +357,7 @@ ADD SCREENSHOT HERE
 - [ ] review is presented in non-faded text without the 'delete' and 'edit' buttons
 - [ ] review can not be edited/delted by user in front end site
 
+![Reviews under course_content](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/7aaafa0a-ba64-4bb8-8b90-d6a35aade8aa)
 
 ***
 
@@ -367,9 +385,9 @@ ADD SCREENSHOT HERE
 
 - [ ] selected review is successfully approved 
 
-
-
-
+![reviews with approval status](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/80c85ee3-3fdd-41f5-bd7c-30dbad49d942)
+![Review selected for approval](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/c80af507-5fdf-447a-b9d5-dd2a1dd551d2)
+![review approved](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/4e447372-0ef3-4342-8191-5c05d9d9d60c)
 
 
 ***
@@ -396,6 +414,7 @@ ADD SCREENSHOT HERE
 **`Actual outcome`**
 - [ ] reviews are visible under a course
 
+![Reviews under course_content](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/7aaafa0a-ba64-4bb8-8b90-d6a35aade8aa)
 
 **`TEST CASE 2: all users can only see approval status of reviews they posted if logged into site with personal profile`**
 
@@ -417,7 +436,7 @@ ADD SCREENSHOT HERE
 **`Actual outcome`**
 - [ ] reviews awaiting approval are not visible to users not logged into front end site
 
-
+![own reviews when logged before approval](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/31077b44-2b0a-4d29-ac29-3f4e23c2be65)
 ***
 
 **TEST CASE NAME: ADD STAR RATING**
@@ -447,7 +466,8 @@ ADD SCREENSHOT HERE
 - [ ] star counter can be toggled up and down
 - [ ] the star count is visible
 
-
+![star rating counting before adding another one](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/f9a9c8bc-fdc8-44fe-8c33-14bf1e7e15c3)
+![increated star count after adding a star](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/76ee5613-f96a-4273-853f-26e644f30912)
 
 ***
 
@@ -474,7 +494,8 @@ ADD SCREENSHOT HERE
 **`Actual outcome`**
 - [ ] star/s are visible under a course
 
-
+![star ratings on course list page](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/b8e5a2bb-2877-47aa-a3d9-a6aaa7480668)
+![star ratings on course content page](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/aa96c8c2-8271-43a4-a27c-2caa047b5b42)
 
 
 

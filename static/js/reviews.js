@@ -11,6 +11,7 @@ var submitForm = document.getElementById("submitButton");
 
 // to clear the review textarea box
 
+reviewText.value = "";
 
 for (let button of deleteButtons) {
     button.addEventListener("click", (e) => {
