@@ -118,9 +118,9 @@ To achieve the goals and scope of this project, i have implemented the following
 
 ### Below is the list of User Stories for this project
 
-These user stories have been elaborated with acceptance criteria. 
+These user stories have also been elaborated with acceptance criteria.  Visit the [project board](https://github.com/Flora-King/Kosi_app/projects?query=is%3Aopen)
 
-For detailed view of the user stories please visit the [project board](https://github.com/Flora-King/Kosi_app/projects?query=is%3Aopen)
+- For stories and linked `**tasks**` see the [Stories and Tasks file](/workspace/Kosi_app/StoriesandTasks.md)
 
 | REF No | USER STORY TITLE            | USER STORY DESCRIPTION                                                                                                        | PRIORITY    | STATUS   | SCOPE  |
 |--------|-----------------------------|-------------------------------------------------------------------------------------------------------------------------------|-------------|----------|--------|
@@ -139,7 +139,7 @@ For detailed view of the user stories please visit the [project board](https://g
 | 8      | View my booked courses      | As a site user I can view courses i have booked/registered for so that i am aware of my course schedule                       | COULD HAVE  | NOT DONE | Future |
 
 
-`**Tasks**` linked to each of the user stories detailed in the [Stories and Tasks file](/workspace/Kosi_app/StoriesandTasks.md)
+
 
 ### **`Templates`** created for this web app and will be in active use for this app are:
 User Registration - created to enable the user to create an account in order to access various areas of this web app
