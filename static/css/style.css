@@ -107,7 +107,7 @@ body {
 }
 
 .course-title {
-    margin-top: 20%;
+    margin-top: 10%;
     margin-left: 5%;
 }
 
@@ -148,7 +148,7 @@ body {
     text-decoration: underline;
 }
 
-.btn-like {
+.btn-star {
     color: #E84610;
     border: none;
     background: transparent;
@@ -159,8 +159,8 @@ body {
     background: #E84610;
 }
 
-.btn-like:hover,
-.btn-like:active {
+.btn-star:hover,
+.btn-star:active {
     color: #E84610;
     background: transparent;
     border: none;
