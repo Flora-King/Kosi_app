@@ -234,14 +234,14 @@ body {
 
   /* footer */
   .fab {
-    color: #fff;
+    color: #e4e2e1;
   }
 
 /* media queries */
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
     .scale {
       display: none;
     }
-  } 
+  }  */
 
