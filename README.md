@@ -157,18 +157,22 @@ Course detail
 * **JavaScript** - To enable a dynamic update and delete functions for the user on reviews awaiting approval. Also used to 
 * **Python** – Is the primary language of Django and used to create all forms, models and views.
 
-* **W3C HTML Validator** - fpr 
+* **W3C HTML Validator**  
 * **W3C CSS Validator**
 * **JS Hint**
 * **CI Python checker**
 * **Lighhouse**
 
 ## TESTING
-Responsive testing
+**Responsive testing**
+
+![Responsive Testing](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/0b9a8253-e2ea-43cc-80c6-d059f3cdcf58)
 
 Browser compatibility testing
 
-lighthouse testing results
+**Lighthouse Testing Results**
+
+![Lighthouse Testing](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/35568f2c-d9a1-4f28-89ff-afea8f299a13)
 
 
 Code validation
@@ -177,7 +181,9 @@ Code validation
 * **W3C CSS Validator**
 * **JS Hint**
 * **CI Python checker**
-* **Lighhouse**
+* **Chrome Devtools**
+
+![Devtools](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/bff12be1-ea3b-44ca-bcd6-d236c80bdb70)
 
 User stories testing
 For a detailed view of the manual tests carried out for all the user stories, see [the ManualTestwriteup.md file](https://github.com/Flora-King/Kosi_app)
