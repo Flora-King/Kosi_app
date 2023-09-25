@@ -1,5 +1,4 @@
 body {
-    /* background-color: #ECE5E1; */
     background-color: #DDD0C8;
     margin-top: 100px;
     font-family: Lato, sans-serif;
@@ -22,14 +21,14 @@ body {
     font-weight: 300;
 }
 
-.light-bg {
+/* .light-bg {
     background-color: #fff;
-}
+} */
 
-.dark-bg-nav {
+/* .dark-bg-nav {
     color: #e4e2e1;
     background-color: black;
-}
+} */
 
 .dark-bg {
     background-color:#323232;
@@ -208,7 +207,6 @@ body {
     -webkit-text-stroke: 2px #000000;
     background-image: url('https://res.cloudinary.com/dcpg9fgrv/image/upload/v1695495718/static/images/logo.1bcfe0594214.png');
     -webkit-background-clip: text;
-    /* background-clip: content-box; */
     background-position: 0 0;
     animation: back 30s linear infinite;
 
@@ -224,14 +222,6 @@ body {
     transform-origin: 50% 50%;
 }
 
-/* media queries */
-
-@media only screen and (max-width: 768px) {
-    .masthead {
-      margin-bottom: 20px;
-    }
-  } 
-
 /* Tone down the animation to avoid motion triggers. */
 @media (prefers-reduced-motion) {
     .text-box h1 {
@@ -246,3 +236,12 @@ body {
   .fab {
     color: #fff;
   }
+
+/* media queries */
+
+@media only screen and (max-width: 768px) {
+    .masthead {
+      margin-bottom: 20px;
+    }
+  } 
+

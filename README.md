@@ -181,9 +181,11 @@ Code validation
 * **W3C CSS Validator**
 * **JS Hint**
 * **CI Python checker**
+
+
 * **Chrome Devtools**
 
-![Devtools](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/bff12be1-ea3b-44ca-bcd6-d236c80bdb70)
+![Javascript code error in Devtools console](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/915f0b06-bb28-4641-8983-dc755b2667ed)
 
 User stories testing
 For a detailed view of the manual tests carried out for all the user stories, see [the ManualTestwriteup.md file](https://github.com/Flora-King/Kosi_app)
