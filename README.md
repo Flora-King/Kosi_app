@@ -2,10 +2,12 @@
 
 **Helpful links**
 
-- Live website for Kosi
-- [project board](https://github.com/Flora-King/Kosi_app/projects?query=is%3Aopen)
-- [Manual testing write up](../Kosi_app/ManualTestswriteup.md)
-- [Wireframes]()
+- [Live website](https://kosi-app-9673f8ad46df.herokuapp.com/)
+
+- [The README.md file](https://github.com/Flora-King/Kosi_app)
+- [Project board](https://github.com/Flora-King/Kosi_app/projects?query=is%3Aopen)
+- [Manual testing write up](https://github.com/Flora-King/Kosi_app)
+- [Wireframes](https://github.com/Flora-King/Kosi_app)
 
 ## INTRODUCTION
 *`Kosi`* is a website app aimed at those looking to book courses. In this instance,
@@ -38,7 +40,7 @@ However, due to time and resources, the `current scope` has been reduced to
 And it is my hope that this built webapp will form a foundation to fullfill the original scope in the very near future.*
 
 
-The live website can be found here [kosi_app](bbbbbbbbbbbbbbbbbbbbbbbb)
+The live website can be found here [kosi_app](https://kosi-app-9673f8ad46df.herokuapp.com/)
 
 ## UX DESIGN
 
@@ -260,7 +262,7 @@ This doesnt affect my code and therefore i have left it in.
 6. *Javascript console bug* - this appears when user is not logged in and is on the course content page. 
     - it can be easliy solved by removing a line of code from the javascript code that makes sure that the reviews text area is left empty when a review is created or edit and awaiting approval. However that is aesthetically please and infact can be confusing to the end user, so i have chosen to leave it in as it is not currently breaking the app
 
-![javascript console bug](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/dc3d8a79-7aa8-4d29-bbf1-0d0f1bd643bc)
+![Javascript console bug](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/dc3d8a79-7aa8-4d29-bbf1-0d0f1bd643bc)
 
 ## DEPLOYMENT
 

@@ -1,18 +1,20 @@
 # KOSI
 
-**Below are links to other readme content**
+**Below are links to other content**
 
-- Live website for Kosi
-- [project board](https://github.com/Flora-King/Kosi_app/projects?query=is%3Aopen)
-- [Manual testing write up](../Kosi_app/ManualTestswriteup.md)
-- [Wireframes](/workspace/Kosi_app/static/images/wireframes)
+- [Live website](https://kosi-app-9673f8ad46df.herokuapp.com/)
+
+- [The README.md file](https://github.com/Flora-King/Kosi_app)
+- [Project board](https://github.com/Flora-King/Kosi_app/projects?query=is%3Aopen)
+- [Manual testing write up](https://github.com/Flora-King/Kosi_app)
+- [Wireframes](https://github.com/Flora-King/Kosi_app)
 
 ## INTRODUCTION
 *`Kosi`* is a website app aimed at those looking to book courses. In this instance,
 
 This website app provides an opportunity to users looking for short IT and computer programming courses.
 
-[README.md file](/workspace/Kosi_app/README.md)
+[README.md file](https://github.com/Flora-King/Kosi_app)
 
 ### Below is the list of User Stories with their related tasks.
 
