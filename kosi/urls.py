@@ -1,5 +1,5 @@
 """
-kosi URL Configuration
+kosi app URL set up
 
 """
 

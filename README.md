@@ -59,12 +59,13 @@ Below are the wireframes i created to aid the initial concept layout planning.
 
 
 ### Colour palette used
+I chose to use the color palette below in order to give my web app a simple but trendy look that would appeal to alot of users whether trendy or not.
 
-![Colour palette](https://github.com/Flora-King/fancy-trivia/assets/106548101/e081efa4-c729-46e9-9b9c-a930caa239d9)
+![Colour palette](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/75a997e0-f335-480a-af08-41e69e1b4ab3)
 
 ### Data Schema 
 
-Bellow is the ERD Diagram to illustrate the data relationship in this web app
+The Diagram illustrates the data relationship between the three main entities /models on which the kosi web app is founded.
 
 ![ERD Diagram](https://github.com/Flora-King/fancy-trivia/assets/106548101/f41d529a-f8f5-4c07-8a18-e6f134576462)
 
@@ -79,6 +80,8 @@ To achieve the goals and scope of this project, i have implemented the following
         - Courses - when clicked, routes the user to the courses list page
         - Login - when clicked routes the user to the login page
         - Register - when clicked routes the user to the Sign up page
+
+
 2. Registration
     - to register, the user can click on the Register button in the navigation bar or use the Sign Up button located on the login page
 
@@ -140,57 +143,70 @@ These user stories have also been elaborated with acceptance criteria.  Visit th
 
 
 
-
-### **`Templates`** created for this web app and will be in active use for this app are:
-User Registration - created to enable the user to create an account in order to access various areas of this web app
-User Login - created to enable
-Course_Detail
-base html
-Course detail
-
+### **`Templates`** created for this web app include:
+    - User Registration - created to enable the user to create an account in order to access various areas of this web app
+    - User Login - created to enable
+    - Course_Detail
+    - Base html
+    - Course detail
 
 
 ## TECHNOLOGIES USED
 
 * **HTML** - To create the Django templates for the associated views and models in the project applications.
 * **CSS** - To style the website.
-* **JavaScript** - To enable a dynamic update and delete functions for the user on reviews awaiting approval. Also used to 
+* **JavaScript** - To enable a dynamic update and delete functions for the user on reviews awaiting approval. Also used to enable a timed appearance of the messages/notifications
 * **Python** – Is the primary language of Django and used to create all forms, models and views.
+* **Bootsrap** - To provide extra styling and out-of-the-box elements e.g. burger menu.
+* **Google Fonts** - fonts used in the web app
+* **ElephantSQL** - the database used to deploy the web app to Heroku
+* **Cloudinary** - used to store images linked to the web app
 
-* **W3C HTML Validator**  
-* **W3C CSS Validator**
-* **JS Hint**
-* **CI Python checker**
-* **Lighhouse**
+* **W3C HTML Validator** - to validate the Html code generated from the page source of the web app
+* **W3C CSS Validator** - to validate the css code used/appled to web app
+* **JS Hint** - to validate the javascript code appled for this web app
+* **CI Python Linter** to validate the python code used in this web app
+* **Lighhouse** - to access that the perfomance, accessiblity and best practices applied in this web app are of higher quality.
 
 ## TESTING
-**Responsive testing**
+* **Responsive testing**
 
 ![Responsive Testing](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/0b9a8253-e2ea-43cc-80c6-d059f3cdcf58)
 
-Browser compatibility testing
-
 **Lighthouse Testing Results**
-
 ![Lighthouse Testing](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/35568f2c-d9a1-4f28-89ff-afea8f299a13)
 
 
-Code validation
+**Code Validation**
 
 * **W3C HTML Validator**
+![image](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/6fc952d0-c360-4099-b757-32ee54861916)
+
+The HTML validator also showed a warning regarding a *<hr>* tag that i used to create a separators between the course content and the reviews container. 
+This doesnt affect my code and therefore i have left it in.
+
+![<hr> tag information](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/790e4c97-e549-4417-bf02-675b573c3162)
+
 * **W3C CSS Validator**
+![CSS Validation results](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/876fda07-960e-4353-ad05-cb41d5785ad2)
+
 * **JS Hint**
-* **CI Python checker**
+![Javascript code validation results](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/e7384ebb-4aa1-4688-b112-a16b62a26546)
+    - two undefine variables
+    - one unused variable
+
+* **CI Python Linter**
+
+![CI Python Linter results](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/c6ef26c5-daf0-4113-a5f1-f4c07f21a37b)
+    - the python code has no errors except for the two long lines that can not be helped and i am aware of. I have tried breaking them up but that just broke my code
 
 
 * **Chrome Devtools**
-
 ![Javascript code error in Devtools console](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/915f0b06-bb28-4641-8983-dc755b2667ed)
 
-User stories testing
-For a detailed view of the manual tests carried out for all the user stories, see [the ManualTestwriteup.md file](https://github.com/Flora-King/Kosi_app)
+### **Features Testing**
+ All features have been tested as part of the **User stories testing**. For a detailed view of the manual tests carried out for all the user stories, see [the ManualTestswriteup.md file](https://github.com/Flora-King/Kosi_app)
 
-Features Testing
 
 ## DEPLOYMENT
 deployment, forking and cloning
