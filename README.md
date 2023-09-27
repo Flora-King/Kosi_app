@@ -374,7 +374,7 @@ This doesnt affect my code and therefore i have left it in.
         - postgres url, 
         - secret key, 
         - allowed host value,
-        - Disablecollectstatic
+        - Disablecollectstatic value
 
 7. ### Continue development in gitpod workspace 
     - in settings.py file
