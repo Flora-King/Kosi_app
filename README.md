@@ -22,6 +22,7 @@
 8. [References](#references)
 
 
+
 **Helpful links**
 
 - [Live website](https://kosi-app-9673f8ad46df.herokuapp.com/)
@@ -31,6 +32,7 @@
 - [Manual testing write up](https://github.com/Flora-King/Kosi_app)
 - [Wireframes](https://github.com/Flora-King/Kosi_app)
 
+***
 
 ## INTRODUCTION
 *`Kosi`* is a website app aimed at those looking to book courses. In this instance,
@@ -232,7 +234,7 @@ To achieve the goals and scope of this project, i have implemented the following
 ### Usability testing
 
 * **Responsive testing**
-
+- used Dev tools to tetsing how the different data and pages render on all different sized devices and found no issues at all.
 ![Responsive Testing](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/0b9a8253-e2ea-43cc-80c6-d059f3cdcf58)
 
 * **Lighthouse Test Results**
@@ -293,7 +295,6 @@ This doesnt affect my code and therefore i have left it in.
     - **solution** - added logo image to cloudinary and wrote added cloudinary link to css code for background image
 
 ![Animations didnt load when app deployed to Heroku](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/686ad7d8-5534-4471-9e68-dbd0d8c690a4)
-
 
 2. css style text was visible on course content page 
 
@@ -373,7 +374,7 @@ This doesnt affect my code and therefore i have left it in.
         - postgres url, 
         - secret key, 
         - allowed host value,
-        - Disablecollectablestatic
+        - Disablecollectstatic
 
 7. ### Continue development in gitpod workspace 
     - in settings.py file
