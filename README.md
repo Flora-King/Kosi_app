@@ -1,13 +1,36 @@
 # KOSI
 
+## Table of contents
+
+1. [Introduction](#introduction)
+    - [Scope](#scope)
+2. [UX Design](#ux-design)
+    - [Wiframes](#wireframes)
+    - [Colour palette](#colour-palette-used)
+    - [Data Diagram](#data-schema)
+3. [Features](#features)
+4. [User Stories](#user-stories)
+5. [Templates](#templates)
+5. [Technologies used](#technologies-used)
+6. [Testing](#testing)
+    - [Usability Testing](#usability-testing)
+    - [Code validation](#code-validation)
+    - [Features testing](#features-testing)
+    - [Bugs](#bugs-and-issues-encountered)
+        - [Unresolved issues](#unresolved-errorsissues)
+7. [Deployment](#deployment)
+8. [References](#references)
+
+
 **Helpful links**
 
 - [Live website](https://kosi-app-9673f8ad46df.herokuapp.com/)
-
+- [Github repository](https://github.com/Flora-King/Kosi_app)
 - [The README.md file](https://github.com/Flora-King/Kosi_app)
 - [Project board](https://github.com/Flora-King/Kosi_app/projects?query=is%3Aopen)
 - [Manual testing write up](https://github.com/Flora-King/Kosi_app)
 - [Wireframes](https://github.com/Flora-King/Kosi_app)
+
 
 ## INTRODUCTION
 *`Kosi`* is a website app aimed at those looking to book courses. In this instance,
@@ -15,32 +38,32 @@
 This website app provides an opportunity to users looking for short IT and computer programming courses.
 
 **TARGETED USERS:**
-* people looking for IT courses
-* people of any age
-* people looking for online and/or in person courses
+* people interested in taking courses 
+* people of any age with preference for either online and/or in person course delivery
 
-**SCOPE**
+### SCOPE
 
 `The original scope` for the Kosi web app was to build and deliver a course booking webapp where users can
 
 * View course content [whether logged in or not]
 * Add a review 
 * Add a rating
-* search through the course list [by either title or description]
+* Edit and Delete content
+* search through the course list
 * add desired courses to a basket for purchasing immediately or save and return later
 * view purchases courses in personal profile when logged in
 
 However, due to time and resources, the `current scope` has been reduced to 
 
-* View course content [whether logged in or not]
+* Read course content [whether logged in or not]
 * Add a review 
 * Add a rating
+* Edit content
+* Delete content
 
-*A reduced scope does not mean a less useful and/or impactful web app but rather one whose delivery is manageable within the given time. 
-And it is my hope that this built webapp will form a foundation to fullfill the original scope in the very near future.*
+**A reduced scope does not mean a less useful and/or impactful web app but rather one whose delivery is manageable within the given time. 
+And it is my hope that this built web app will form a foundation for future web app whose functionality will be extended to fullfill the original scope.**
 
-
-The live website can be found here [kosi_app](https://kosi-app-9673f8ad46df.herokuapp.com/)
 
 ## UX DESIGN
 
@@ -83,6 +106,7 @@ To achieve the goals and scope of this project, i have implemented the following
         - Login - when clicked routes the user to the login page
         - Register - when clicked routes the user to the Sign up page
 
+![Nav bar and footer](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/b33b1e84-b5ba-43d0-b47a-33d5e24e1e74)
 
 2. **`Registration`**
 - To register, the user can click on the Register button in the navigation bar or use the Sign Up button located on the login page
@@ -91,6 +115,7 @@ To achieve the goals and scope of this project, i have implemented the following
 
 3. **`Logging in`**
 - To login, the user can click on the Login button in the navigation bar; or use the login button located on the Sign Up page or one on the course content page
+
 ![Log in page](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/e0140b77-f666-4e32-b32b-d9cf02fe5fa3)
 
 
@@ -146,8 +171,7 @@ To achieve the goals and scope of this project, i have implemented the following
 | deleting a review                 | Review deleted                       |
 
 
-
-### <ins>USER STORIES for this project</ins>
+## USER STORIES
 
 - The user stories below have also been elaborated with acceptance criteria in the [Project board](https://github.com/Flora-King/Kosi_app/projects?query=is%3Aopen)
 
@@ -170,13 +194,20 @@ To achieve the goals and scope of this project, i have implemented the following
 | 8      | View my booked courses      | As a site user I can view courses i have booked/registered for so that i am aware of my course schedule                       | COULD HAVE  | NOT DONE | Future |
 
 
+## TEMPLATES
 
-### **`Templates`** created for this web app include
-    **`signup.html`** - created to enable the user to create an account in order to access various areas of this web app
-    - **`login.html`** - created to enable
-    - **`base.html`** - 
-    - **`course_detail.html`** -
-    - **`index.html`** -
+ **Templates** created for this web app include
+
+- **base.html** - loads bootstrap and fonts and also contains structuring for the navigation and footer, plus also contains block content tags 
+        [where content from the rest of the templates will be injected]
+
+- **signup.html** - extends base.html and also has code to enable the user to create an account for accessing various areas of this web app
+
+- **login.html** - extends base.html and also code to enable the user to log into the web app and add a review and/or a star rating
+
+- **course_detail.html** - extends base.html and holds the course list and the course content details
+
+- **index.html** -extends base.html and has a forloop that enables iteration through the courses.
 
 
 ## TECHNOLOGIES USED
@@ -189,25 +220,30 @@ To achieve the goals and scope of this project, i have implemented the following
 * **Google Fonts** - fonts used in the web app
 * **ElephantSQL** - the database used to deploy the web app to Heroku
 * **Cloudinary** - used to store images linked to the web app
-
 * **W3C HTML Validator** - to validate the Html code generated from the page source of the web app
 * **W3C CSS Validator** - to validate the css code used/appled to web app
 * **JS Hint** - to validate the javascript code appled for this web app
 * **CI Python Linter** to validate the python code used in this web app
-* **Lighhouse** - to access that the perfomance, accessiblity and best practices applied in this web app are of higher quality.
+* **Lighhouse** - to assess that the perfomance, accessiblity and best practices applied in this web app are of higher quality.
+* **lucid.app** - for wireframing
 
 ## TESTING 
+
+### Usability testing
+
 * **Responsive testing**
 
 ![Responsive Testing](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/0b9a8253-e2ea-43cc-80c6-d059f3cdcf58)
 
-* **Lighthouse Testing Results**
+* **Lighthouse Test Results**
+
 ![Lighthouse Testing](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/35568f2c-d9a1-4f28-89ff-afea8f299a13)
 
 
-<ins>**Code Validation**</ins>
+### Code Validation
 
 * **W3C HTML Validator**
+
 ![image](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/6fc952d0-c360-4099-b757-32ee54861916)
 
 The HTML validator also showed a warning regarding a *<hr>* tag that i used to create a separators between the course content and the reviews container. 
@@ -216,99 +252,174 @@ This doesnt affect my code and therefore i have left it in.
 ![hr tag information](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/790e4c97-e549-4417-bf02-675b573c3162)
 
 * **W3C CSS Validator**
+
 ![CSS Validation results](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/876fda07-960e-4353-ad05-cb41d5785ad2)
 
 * **JS Hint**
+
 ![Javascript code validation results](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/e7384ebb-4aa1-4688-b112-a16b62a26546)
-    - two undefine variables
-    - one unused variable
+
+- two undefined variables
+    - **bootsrap** 
+        - This loads bootsrap modal utilised in teh course_detail.html template to facilitate the deletion of a review
+
+    - **submitButton**
+        - This variable in placed in course_detail.html template and it is an event listener
+
+- one unused variable
+    - **submitForm** 
+        - this variable is used to submit a form once id of submitButton is identified
 
 * **CI Python Linter**
 
 ![CI Python Linter results](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/c6ef26c5-daf0-4113-a5f1-f4c07f21a37b)
-- the python code has no errors except for the two long lines that can not be helped and i am aware of. I have tried breaking them up but that just broke my code
 
+- the python code has no errors except for the two long lines that i am aware of and are not affecting my code. I have tried breaking them up but that just broke my code, so decided to leave them 
 
 * **Chrome Devtools**
+
 ![Javascript code error in Devtools console](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/915f0b06-bb28-4641-8983-dc755b2667ed)
 
 ### **Features Testing**
+
  All features have been tested as part of the **User stories testing**. 
  
  For a detailed view of the manual tests carried out for all the user stories, see [the ManualTestswriteup.md file](https://github.com/Flora-King/Kosi_app)
 
-* **Bugs encountered**
+### **Bugs and issues encountered**
+
 1. The animations on the register and login pages didn't work when app was first deployed to Heroku.  
+    
     - **solution** - added logo image to cloudinary and wrote added cloudinary link to css code for background image
 
 ![Animations didnt load when app deployed to Heroku](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/686ad7d8-5534-4471-9e68-dbd0d8c690a4)
 
-2. delete button wasn't working [had to remove script link from base.html, then ]
 
-3. style text visible on course content page [manaually removed the style tet in admin site]
+2. css style text was visible on course content page 
+
+    - **solution** -manaually removed the style text in admin site
 
 ![style code visible on front end app](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/5098b93f-4046-4c7c-acd5-149f2dc31811)
 
 
-4. There were bad/low accessibility mainly due to images not having names {added title and alt text in meta dat of each image in cloudinary}
+3. There were bad/low accessibility mainly due to images not having alt text 
+    
+    - **solution** - added title and alt text in meta data of each image in cloudinary
 
+![Accessibility issues](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/3a2f73d2-981f-44f3-95e4-6297ba241779)
 
-<ins>**Below are unresolved errors**</ins>
+#### Unresolved errors/issues
 
-5. *Pep8 problems* - relate to the need for installation of "Jupyter" extension in VS Code which is ot a requirement for this project. Also they are not causing any issues at the moment for my project so have chosen to leave them
+4. *`Pep8 problems`* 
+    - there are two errors that relate to the need for installation of "Jupyter" extension in VS Code which is ot a requirement for this project. Also they are not causing any issues at the moment for my project so have chosen to leave them
 
 ![pep8 errors](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/600218cd-b6cd-47f7-a31d-6e815831a373)
 
-6. *Javascript console bug* - this appears when user is not logged in and is on the course content page. 
-    - it can be easliy solved by removing a line of code from the javascript code that makes sure that the reviews text area is left empty when a review is created or edit and awaiting approval. However that is aesthetically please and infact can be confusing to the end user, so i have chosen to leave it in as it is not currently breaking the app
+5. *`Javascript console error`* 
+
+- this appears when user is not logged in and is on the course content page. 
+- it can be solved by removing a line of code from the reviews.js file that makes sure that the reviews textarea is emptied whenever a review is created or edited, and still awaiting approval.
+- removing this line of code makes the usage of the web app aesthetically not pleasing and in fact can be confusing to the end user. So, i have chosen to leave it in as it is not currently breaking the web app
 
 ![Javascript console bug](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/dc3d8a79-7aa8-4d29-bbf1-0d0f1bd643bc)
 
 ## DEPLOYMENT
 
-### GitHub set up
--	Create repository in Git hub using provided Code institute template
--	Create Project board and add automated workflow <to add user stories to the TO DO lane once created in issues with open status>
--	Create user story template and use to create user stories
--	Add acceptance criteria to all user stories and priority labels
+1. ### Create Repository and set up project in GitHub
 
-### initial setup in gitpod 
--	Set up the project - install libraries
--	Install Django
--	Add the below supporting libraries
-    -	Postgres’s sql, 
-    -   psycopg2, 
+    - Create repository in Github using provided Code institute template
+    - Create Project board and add automated workflow <to add user stories to the TO DO lane once created in issues with status=open>
+    - Create user story template and apply it to create user stories
+    - Add detailed acceptance criteria to all user stories and priority labels
+    - define the layout of the webapp using wireframing
+    - create tasks against each user story [in separate word document for reference and progress management during build]
 
-### set up Database in ElephantSQL
-- 	Create external database in elephantSQL using github lohin details
+2. ### initial setup of the project in gitpod
 
-### set up Cloudinary and for linking to heroku app once created
-- Set up Cloudinary-storage
+    - Install Django using (pip3 install 'django<4') command
+    - Create project using (django-admin startproject Kosi .) command
+    - create new app using (python3 manage.py startapp Kosi_app) command
+    - add new app to installed apps in settings.py
+    - Add the following supporting libraries: postgres and psycopg2 - using (pip3 install psycopg2-binary) command
+    - create requirements.txt file - using (pip3 freeze --local > requirements.txt) command
+    - install webserver using (pip3 install gunicorn) command
+    - create the Procfile
+    - Create env.py file and make sure it is part of .gitignore file content
+        - add all to requirements.txt
+        - make migrations and migrate 
+        - runserver to test set up and commit changes
+
+3. ### set up external Database in ElephantSQL
+
+    - Create account in ElephantSQL using github login details
+    - Create new instance with Europe as region
+    - Take note of the url for use later when sett ing up Heroku app
+
+4. ### set up Cloudinary storage for my images
+
     - Create Cloudinary account using github login details
-    - take note of API and Secret key for use later
+    - Take note of API and Secret key for use later
 
+5. ### create Heroku app
 
-### create Heroku app
-- 	Create app in Heroku
-- 	generate secret keys using miniwebtool.com/django
--	Link Heroku app to ElephantSQL databases and Cloudinary via the reveal vars tab under settings module in Heroku
+    - log into Heroku and create new app
+    - Set Europe as region and connect Heroku app to github repository for this project
 
-### Continue with setup in gitpod workspaces
-- 	Create a new blank Django project called Kosi_app and kosi app
--	Create requirements.txt
--	Create a Procfile
-- 	Set our project to use cloudinary and PostgressSQL
-- 	Link project to Heroku db and Deploy
-- 	Create env.py file and prepare settings.py file by
-- 	adding Cloudinary apps under installed apps
-- 	Amending default database to postgres sql
+6. ### connect remote database to Heroku app
 
--	Create media, static and templates folders in the root directory
+    - From the Reveal config vars tab under settings module in Heroku, i added the keys below:
+        - Elephant SQL database url, 
+        - cloudinary storage url,  
+        - postgres url, 
+        - secret key, 
+        - allowed host value,
+        - Disablecollectablestatic
 
--	Deploy and connect Heroku app to GitHub
-	
--	Create db models part of MTV architecture and migrated them
+7. ### Continue development in gitpod workspace 
+    - in settings.py file
+        - under installed apps, add Cloudinary app, postgres, crispy forms, summernote, et al. 
+        - Amend default database url to point to database_url value already set up in Heroku
+    
+    - following the MTV [Models, Templates and Views] architectural guidance
+        - Create views in the a views.py file
+        - create a models.py file and add models relating to the views
+        - create admin.py to manage the created models and views
+        - create templates folders and proceed to amend code as needed
+        - create forms.py file
+        - create a urls.py file and add urls relating to the above
+        - create static folder in the root directory to house css, js and images folders
+        - add javascript code for edit and delete buttons on reviews
+        - create superuser details to access admin site
+    - add all to requirements.txt
+    - make migrations and migrate 
+    - runserver to test set up and commit changes            
 
+8. ### Access admin site and create course content in admin site
+    - add course content 
+    - check front end web app to ensure course data is presented as needed 
+        - add all to requirements.txt
+        - make migrations and migrate 
+        - runserver to test set up and commit changes 
+
+9. ### Continue to amend/tweak code in templates, urls and models in line with desired outcome	
+    - add all to requirements.txt
+    - make migrations and migrate 
+    - runserver to test set up and commit changes 
+
+10.	### Deploy to Heroku
+    - ensure all code is structured and runs as desired
+    - change DEBUG value to False
+        - add all to requirements.txt
+        - make migrations and migrate 
+        - runserver to test set up and commit changes
+    - log into Heroku app
+    - delete value for DiSABLECOLLECTABLESTATICS
+    - navigate to deploy tab and choose desired deployment method - manual or automatic 
+    -   i chose to use manual deployment 
+
+11. ### Final deployment to Heroku
+
+![complete before submission](WILL ADD LATER AFTER FEEDBACK BUT BEFORE SUBMISSION)
 
 
 
@@ -319,3 +430,8 @@ This doesnt affect my code and therefore i have left it in.
 * Stackoverflow - used as a resource for guidance on any errors or issues i encountered
 * followed the steps provided by the Code institute 'I Think therefore I Blog' walkthrough tutorial to build my web app
 * reviewed several youtube tutorials to understand how to execute certain functionalities in Django e.g. 
+* reviewed and referenced the information from below resouces for guidance during build
+    - https://docs.djangoproject.com/en/
+    - https://www.w3schools.com/
+    - https://getbootstrap.com/docs/5.3/getting-started/introduction/
+    - https://www.geeksforgeeks.org/  
