@@ -46,34 +46,35 @@ This website app provides an opportunity to users looking for short IT and compu
 
 ### SCOPE
 
-`The scope` for the Kosi web app 
+`The scope` for the Kosi web app is:
 
 * Viewing course content whether logged in or not
 * Adding a review when logged in 
 * Adding a rating when logged in 
-* Updating and Deleting own reviews before approval
+* Updating and Deleting own reviews that are still awaiting approval
 
 
 ## UX DESIGN
+The Kosi web app has been built with a simple but highly impactful design.
 
 ![Kosi web app appearance on all devices](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/0b9a8253-e2ea-43cc-80c6-d059f3cdcf58)
 
 ### Wireframes
-The Kosi web app has been built with a simple but highly impactful design.
 
 Below are the wireframes I created to aid the initial concept layout planning.
 
-![Navbar wireframe](https://github.com/Flora-King/fancy-trivia/assets/106548101/4a1b7c02-811a-4422-8f6a-90e2d26c2505)
+![Navbar Wireframe](https://github.com/Flora-King/fancy-trivia/assets/106548101/4a1b7c02-811a-4422-8f6a-90e2d26c2505)
 
 ![Register page wireframe](https://github.com/Flora-King/fancy-trivia/assets/106548101/f971bb81-0ee2-4efc-a71d-2835383a3b22)
 
-![login page - wireframe](https://github.com/Flora-King/fancy-trivia/assets/106548101/e78c9f75-c7c2-497b-99e5-042c74223444)
+![Login page - wireframe](https://github.com/Flora-King/fancy-trivia/assets/106548101/e78c9f75-c7c2-497b-99e5-042c74223444)
 
 ![Course List page wireframe](https://github.com/Flora-King/fancy-trivia/assets/106548101/b845375d-2978-4c06-a4d4-f7301226e356)
 
 ![Course content page wireframe](https://github.com/Flora-King/fancy-trivia/assets/106548101/5d89cbbf-7535-4888-b8ab-b903060595b5)
 
 ### Colour palette used
+
 I chose to use the colour palette below in order to give my web app a simple but trendy look so as to expand its appeal.
 
 ![Colour palette](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/75a997e0-f335-480a-af08-41e69e1b4ab3)
@@ -84,51 +85,62 @@ The Diagram illustrates the data relationship between the three main entities /m
 
 ![ERD Diagram](https://github.com/Flora-King/fancy-trivia/assets/106548101/f41d529a-f8f5-4c07-8a18-e6f134576462)
 
+- The user model is automatially generated on creation of the Django project. The User model has a one to many relationship to both the Course model and the Review Model.
+- The Course model has a one to many relationship with both the User model and the Review model
+- The Review model has a many to one relationship to both the User model and the Course model
+
+
 ## FEATURES
 
 To achieve the goals and scope of this project, I have implemented the following features
 
 1. **Navigation**
-    - the navigation for the Kosi web app is very simple and easy. it is made simple to ensure complete ease of use by anyone using any type of device.
-    - the navigation bar has the following
-        - Kosi Logo - when clicked, routes the user to the courses list page 
-        - Courses - when clicked, routes the user to the courses list page
-        - Login - when clicked routes the user to the login page
-        - Register - when clicked routes the user to the Sign-up page
+
+- The navigation for the Kosi web app is very simple and easy to ensure complete ease of use by anyone using any type of device.
+- The navigation bar has the following tabs:
+    - Kosi Logo - when clicked, routes the user to the courses list page 
+    - Courses - when clicked, routes the user to the courses list page
+    - Login - when clicked routes the user to the login page
+    - Register - when clicked routes the user to the Sign-up page
 
 ![Navbar and Footer](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/b33b1e84-b5ba-43d0-b47a-33d5e24e1e74)
 
 2. **Registration**
+
 - To register, the user can click on the Register button in the navigation bar or use the Sign-Up button located on the login page
 
 ![Register Page](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/d386763d-e8ce-4759-bf45-54db997b4e9b)
 
 3. **Logging in**
+
 - To login, the user can click on the Login button in the navigation bar; or use the login button located on the Sign-Up page or one on the course content page
 
 ![Log in page](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/e0140b77-f666-4e32-b32b-d9cf02fe5fa3)
 
 4. **Creating a review and adding a rating**
+
 - To create a review/add a rating, the user needs to log in first and navigate to the bottom of their chosen course content page
 
 ![Newly created review awaiting approval](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/9f74cdba-f63f-4799-b879-220e86d496ff)
 
 5. **Viewing content**
+
 - The courses page displays the course list where each course has an image, excerpt, price, delivery and delivery_date
 
 ![Course List](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/89d745cb-38eb-4534-bc05-c254cfb04f00)
 
-    - further course content is accessible via the course content page when the user clicks on any course's excerpt
-    - the user is able to view course content without logging in first
-    - the user is also able to view approved reviews  and star ratings added against a course whether logged in or not
+- Further course content is accessible when the user clicks on course excerpt link
+- The user is able to view this course content without logging in first
+- The user is also able to view approved reviews and star ratings added to a course both when logged in or not
 
 ![Course content](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/e9c0712e-5084-4d4c-99e1-aeec512882f4)
 
 6. **Updating reviews and star ratings**
-- the user can only update their own reviews or star ratings
-- to update reviews, the user needs to log in first and navigate to the bottom of their chosen course content page
-- to update a review, the review must still be pending approval
-- star ratings can be removed by the user without approval. However, the user must be logged into the web app.
+
+- The user can only update their own reviews or star ratings
+- To update reviews, the user needs to log in first and navigate to the bottom of their chosen course content page
+- To update a review, the review must still be pending approval
+- Star ratings can be removed by the user without approval. However, the user must be logged into the web app.
 
 ![Reviews when logged in](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/50d1c8a1-12a1-4d7b-a2c8-9004a43be626)
 
@@ -137,10 +149,11 @@ To achieve the goals and scope of this project, I have implemented the following
 ![Review update completed](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/ba5db783-f5be-488f-a2cc-73c42479ec15)
 
 7. **Deleting reviews**
-- the user can only delete their own reviews or remove star ratings they added
-- to delete reviews, the user needs to log in first and navigate to the bottom of their chosen course content page
-- to delete a review, the review must still be pending approval
-- star ratings can be removed by the user without approval. However, the user must be logged into the web app.
+
+- The user can only delete their own reviews or remove star ratings they added
+- To delete reviews, the user needs to log in first and navigate to the bottom of their chosen course content page
+- To delete a review, the review must still be pending approval
+- Star ratings can be removed by the user without approval. However, the user must be logged in the web app.
 
 ![Ready to delete a review](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/d5bc7ad7-665b-4b9b-a995-8a0065820a53)
 
@@ -218,47 +231,54 @@ To achieve the goals and scope of this project, I have implemented the following
 
 ### Usability testing
 
-* **Responsive testing**
+#### Responsive testing
 
 ![Responsive Testing](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/0b9a8253-e2ea-43cc-80c6-d059f3cdcf58)
 
 - Also tested how the different pages render on all different sized devices and found no issues at all.
 
-* **Lighthouse Test Results**
+#### Lighthouse Test Results
 
-![Lighthouse Testing](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/35568f2c-d9a1-4f28-89ff-afea8f299a13)
+![Lighthouse report for Desktop - on Login page ](https://github.com/Flora-King/TopServices/assets/106548101/76d96154-9cb8-485a-b24f-8b0fa731babd)
+
+![Lighthouse report for mobile - on Login page ](https://github.com/Flora-King/TopServices/assets/106548101/7c5fe0c3-e11d-4e39-8d1f-a0e386593af2)
+
+![Lighthouse report for mobile - on Register page](https://github.com/Flora-King/TopServices/assets/106548101/713345e3-759c-4251-940b-93fbd4eeaf91)
+
+![Lighthouse report for Desktop - on Register page ](https://github.com/Flora-King/TopServices/assets/106548101/d8cb9d26-50b9-4478-ad12-f5019c2976ab)
+
+![Lighthouse report for Desktop - on Courses page ](https://github.com/Flora-King/TopServices/assets/106548101/8d25bc02-63d1-4ed7-b293-0d9d6e8e7e25)
+
+![Lighthouse report for mobile - on Courses page ](https://github.com/Flora-King/TopServices/assets/106548101/a321fc43-cae5-48b3-b40b-537aa33c37ae)
+
+* The above low performance is due to the script links placed in the header of base.html. When moved to the bottom, I get a bootstrap error in the console which also causes errors in my reviews.js
+
+![Lighthouse report for mobile - on Courses page with perfomace issues](https://github.com/Flora-King/TopServices/assets/106548101/342fadc1-7b40-4a4d-abd9-d485b3242d70)
 
 ### Code Validation
 
-* **W3C HTML Validator**
+##### W3C HTML Validator
 
-![image](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/6fc952d0-c360-4099-b757-32ee54861916)
+![W3C HTML Validator](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/6fc952d0-c360-4099-b757-32ee54861916)
 
-The HTML validator also showed a warning regarding a *<hr>* tag that I used to create a separators between the course content and the reviews container. 
+The HTML validator also showed a warning regarding a [hr] tag that I used to create a separators between the course content and the reviews container. 
 This doesn’t affect my code and therefore I have left it in.
 
 ![hr tag information](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/790e4c97-e549-4417-bf02-675b573c3162)
 
-* **W3C CSS Validator**
+##### W3C CSS Validator
 
 ![CSS Validation results](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/876fda07-960e-4353-ad05-cb41d5785ad2)
 
-* **JS Hint**
+##### JS Hint
 
-![JavaScript code validation results](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/e7384ebb-4aa1-4688-b112-a16b62a26546)
+![JavaScript code validation results](https://github.com/Flora-King/TopServices/assets/106548101/a6596471-ad4a-4255-8811-308c7cb9a737)
 
-- two undefined variables
+- Undefined variable
     - **bootstrap** 
         - This loads bootstrap modal utilised in the course_detail.html template to facilitate the deletion of a review
 
-    - **submitButton**
-        - This variable in placed in course_detail.html template and it is an event listener
-
-- one unused variable
-    - **submitForm** 
-        - this variable is used to submit a form once id of submitButton is identified
-
-* **CI Python Linter**
+##### CI Python Linter
 
 ![CI Python Linter results](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/c6ef26c5-daf0-4113-a5f1-f4c07f21a37b)
 
@@ -272,33 +292,35 @@ This doesn’t affect my code and therefore I have left it in.
 
 ### **Bugs and issues encountered**
 
-1. The animations on the register and login pages didn't work when app was first deployed to Heroku.  
+1. #### The animations on the register and login pages didn't work when app was first deployed to Heroku.  
     
     - **solution** - added logo image to cloudinary and wrote added cloudinary link to CSS code for background image
 
 ![Animations did not load deployed to Heroku](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/686ad7d8-5534-4471-9e68-dbd0d8c690a4)
 
-2. CSS style text was visible on course content page 
+2. #### CSS style text was visible on course content page 
 
     - **solution** -manually removed the style text in admin site
 
 ![style code visible on front end app](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/5098b93f-4046-4c7c-acd5-149f2dc31811)
 
-3. There were bad/low accessibility mainly due to images not having alt text 
+3. #### There were bad/low accessibility mainly due to images not having alt text 
     
     - **solution** - added title and alt text in meta data of each image in cloudinary
 
 ![Accessibility issues](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/3a2f73d2-981f-44f3-95e4-6297ba241779)
 
-#### Unresolved errors/issues
 
-4. *`JavaScript console error`* 
+4. #### JavaScript console error
 
-- this appears when user is not logged in and is on the course content page. 
-- it can be solved by removing a line of code from the reviews.js file that makes sure that the reviews text area is emptied whenever a review is created or edited, and still awaiting approval.
-- removing this line of code makes the usage of the web app aesthetically not pleasing and in fact can be confusing to the end user. So, I have chosen to leave it in as it is not currently breaking the web app
+- this appeared when user is not logged in and is on the course content page. 
+- **solution** - added condition to the javascript code to check if that the reviewText.value was emptied before proceeding to delete review
 
 ![JavaScript console bug](https://github.com/Code-Institute-Solutions/Hello-Django-Django3/assets/106548101/dc3d8a79-7aa8-4d29-bbf1-0d0f1bd643bc)
+
+#### Unresolved errors/issues
+
+- There no outstanding errors from the code I created. The errors outstanding are coming from code auto-generated when django was installed.
 
 ## DEPLOYMENT
 
@@ -311,7 +333,7 @@ This doesn’t affect my code and therefore I have left it in.
     - Define the layout of the webapp using wireframing
     - Create tasks against each user story [in separate word document for reference and progress management during build]
 
-2. ### initial setup of the project in gitpod
+2. ### Initial setup of the project in gitpod
 
     - Install Django using (pip3 install 'django<4') command
     - Create project using (django-admin startproject Kosi .) command
@@ -326,23 +348,23 @@ This doesn’t affect my code and therefore I have left it in.
         - Make migrations and migrate 
         - Runserver to test set up and commit changes
 
-3. ### set up external Database in ElephantSQL
+3. ### Set up external Database in ElephantSQL
 
     - Create account in ElephantSQL using GitHub login details
     - Create new instance with Europe as region
     - Take note of the url for use later when setting up Heroku app
 
-4. ### set up Cloudinary storage for my images
+4. ### Set up Cloudinary storage for my images
 
     - Create Cloudinary account using GitHub login details
     - Take note of API and Secret key for use later
 
-5. ### create Heroku app
+5. ### Create Heroku app
 
     - Log into Heroku and create new app
     - Set Europe as region and connect Heroku app to GitHub repository for this project
 
-6. ### connect remote database to Heroku app
+6. ### Connect remote database to Heroku app
 
     - From the Reveal config vars tab under settings module in Heroku, I added the keys below:
         - Elephant SQL database url, 
@@ -357,7 +379,7 @@ This doesn’t affect my code and therefore I have left it in.
         - Under installed apps, add Cloudinary app, postgres, crispy forms, summernote, et al. 
         - Amend default database url to point to database_url value already set up in Heroku
     
-    - following the MTV [Models, Templates and Views] architectural guidance
+    - Following the MTV [Models, Templates and Views] architectural guidance
         - Create views in the a views.py file
         - Create a models.py file and add models relating to the views
         - Create admin.py to manage the created models and views
@@ -367,36 +389,47 @@ This doesn’t affect my code and therefore I have left it in.
         - Create static folder in the root directory to house CSS, js and images folders
         - Add JavaScript code for edit and delete buttons on reviews
         - Create superuser details to access admin site
-    - add all to requirements.txt
-    - make migrations and migrate 
-    - runserver to test set up and commit changes            
+    - Add all to requirements.txt
+    - Make migrations and migrate 
+    - Runserver to test set up and commit changes            
 
 8. ### Access admin site and create course content in admin site
     - Add course content 
     - check front end web app to ensure course data is presented as needed 
-        - add all to requirements.txt
-        - make migrations and migrate 
-        - runserver to test set up and commit changes 
+        - Add all to requirements.txt
+        - Make migrations and migrate 
+        - Runserver to test set up and commit changes 
 
-9. ### Continue to amend/tweak code in templates, urls and models in line with desired outcome  
-    - add all to requirements.txt
-    - make migrations and migrate 
-    - runserver to test set up and commit changes 
+9. ### Continue to amend/tweak code in templates, urls and models in line with scope 
+    - Add all to requirements.txt
+    - Make migrations and migrate 
+    - Runserver to test set up and commit changes 
 
 10. ### Deploy to Heroku
-    - ensure all code is structured and runs as desired
-    - change DEBUG value to False
-        - add all to requirements.txt
-        - make migrations and migrate 
-        - runserver to test set up and commit changes
-    - log into Heroku app
-    - delete value for DiSABLECOLLECTABLESTATICS
-    - navigate to deploy tab and choose desired deployment method - manual or automatic 
-    -   I chose to use manual deployment in order to monitor any rising errors before final deployment
+    - Ensure all code is structured and runs as desired
+    - Change DEBUG value to False
+        - Add all to requirements.txt
+        - Make migrations and migrate 
+        - Runserver to test set up and commit changes 
+    - Log into Heroku app
+    - Delete value for DiSABLECOLLECTABLESTATICS
+    - Navigate to deploy tab and choose desired deployment method - manual or automatic
+        - at this point, I chose to use manual deployment in order to monitor any rising errors before final deployment
+
 
 11. ### Final deployment to Heroku
 
-![complete before submission](WILL ADD LATER AFTER FEEDBACK BUT BEFORE SUBMISSION)
+    - Ensure all code is structured and runs as desired
+    - Confirm there are no outstanding migrations
+    - Change DEBUG value to False
+        - add all code to requirements.txt file
+        - make migrations and migrate 
+        - runserver to test set up and commit changes
+    - Log into Heroku app
+    - Comfirm the DiSABLECOLLECTABLESTATICS value has been deleted
+    - Navigate to deploy tab and choose desired deployment method - manual or automatic
+    - Deploy manually to ensure all okay
+    - Change the deployment mentod to automatic
 
 
 ## REFERENCES
@@ -404,9 +437,9 @@ This doesn’t affect my code and therefore I have left it in.
 * Harry Dhillon - my code institute mentor provided a lot of guidance and advice
 * Code institute tutors - were very helpful when it came to understanding issues I faced throughout the build
 * Stackoverflow - used as a resource for guidance on any errors or issues I encountered
-* followed the steps provided by the Code institute 'I Think therefore I Blog' walkthrough tutorial to build my web app
-* reviewed several YouTube tutorials to understand how to execute certain functionalities in Django e.g. 
-* reviewed and referenced the information from below resources for guidance during build
+* Followed the steps provided by the Code institute 'I Think therefore I Blog' walkthrough tutorial to build my web app
+* studied and reviewed several YouTube tutorials to understand how to execute certain functionalities in Django 
+* Reviewed and referenced the information from below resources for guidance during build
     - https://docs.djangoproject.com/en/
     - https://www.w3schools.com/
     - https://getbootstrap.com/docs/5.3/getting-started/introduction/

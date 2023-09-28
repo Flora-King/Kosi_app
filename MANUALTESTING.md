@@ -1,6 +1,7 @@
 # KOSI
 
-**Links to other content**
+
+### Links to other content**
 
 - [Live website](https://kosi-app-9673f8ad46df.herokuapp.com/)
 - [GitHub Repository](https://github.com/Flora-King/Kosi_app)
@@ -224,7 +225,7 @@ Below are the list of all manual tests undertaken
 **TEST CASE 1**: ability to create draft content, and save to publish later
 
 **Preconditions**
-- Django project set up
+- Django project is set up
 - Admin site created
 - Site admin user created and authenticated
 - Course model set up in admin site
