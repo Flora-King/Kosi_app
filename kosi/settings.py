@@ -21,10 +21,10 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-floraking-kosiapp-rzb6j5uum26.ws-eu104.gitpod.io',
+    '8000-floraking-kosiapp-j9jqscbqpg7.ws-eu105.gitpod.io',
     'kosi-app-9673f8ad46df.herokuapp.com'
     ]
 
